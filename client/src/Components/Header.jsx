@@ -14,10 +14,12 @@ class Header extends Component {
                 alt="wolf logo"
               />
             </Link>
-            <div className="logo-words-container">
-              <h1 className="logo-upper">Find a Bro</h1>
-              <p className="logo-lower">Expand Your Wolfpack</p>
-            </div>
+            <Link className="logo-words" to="/">
+              <div className="logo-words-container">
+                <h1 className="logo-upper">Find a Bro</h1>
+                <p className="logo-lower">Expand Your Wolfpack</p>
+              </div>
+            </Link>
           </div>
           <div className="directions">
             <Link
