@@ -31,6 +31,7 @@ Meme
 - description
 
 > Actions
+> Mapping URLS to actions that interact with that model
 
 - users can log it
 - users can edit profile
