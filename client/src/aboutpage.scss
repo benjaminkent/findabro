@@ -1,0 +1,22 @@
+.about-page-main {
+  background-size: 20rem;
+  background-position: left -10vw top 80vw;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #d6d6d6;
+}
+
+.about-page-main h1 {
+  margin: 0;
+  padding-top: 5.5rem;
+  text-align: center;
+  color: $primary-black;
+  font-family: $arvo;
+}
+
+.about-page-main p {
+  padding: 1.5rem;
+  color: $primary-black;
+  font-family: $poppins;
+  margin: 0;
+}

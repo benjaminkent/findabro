@@ -1,0 +1,121 @@
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+label {
+  margin-right: 0.5rem;
+  text-transform: capitalize;
+}
+
+.cancel-edit {
+  display: flex;
+  align-self: flex-end;
+  margin: 1rem 1rem 1rem 0;
+  color: $primary-black;
+  text-decoration: none;
+  z-index: 0;
+}
+
+.cancel-edit p {
+  margin: 0;
+}
+
+.cancel-edit-back {
+  padding-top: 0.25rem;
+  padding-right: 0.3rem;
+}
+
+.edit-name-location input {
+  margin: 0.5rem auto;
+  color: $primary-black;
+  font-weight: 300;
+  font-family: $arvo;
+  font-size: 1.3rem;
+  border-radius: 20px;
+  padding: 0 1rem;
+  border-width: 0.5px;
+}
+
+.edit-name-location input:focus {
+  outline: none;
+}
+
+.edit-name-location input::placeholder {
+  color: #afafaf;
+}
+
+.edit-user-image {
+  width: 80%;
+}
+
+.edit-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5rem;
+}
+
+.upload-image-text {
+  font-family: $arvo;
+  color: $primary-black;
+  margin-bottom: 3rem;
+}
+
+.edit-answers {
+  display: flex;
+  flex-direction: column;
+}
+
+input.radio {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  border: 2px solid $primary-black;
+  transition: 0.2s all linear;
+  margin-right: 5px;
+  background-color: white;
+  position: relative;
+  top: 0.32rem;
+  outline: none;
+}
+
+input.radio:checked {
+  border: 6px solid $primary-mustard;
+}
+
+.about-user-info {
+  font-family: $poppins;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.question {
+  font-size: 1rem;
+}
+
+.submit {
+  margin: 1rem auto 3rem auto;
+  display: flex;
+  justify-content: center;
+  font-family: $arvo;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  background-color: $primary-mustard;
+  color: $primary-black;
+  border: 1px solid $primary-black;
+}
+
+.submit:focus {
+  outline-color: $primary-mustard;
+}
+
+.submit:hover {
+  transition: 0.2s all ease-in-out;
+  color: $primary-mustard;
+  background-color: $primary-black;
+}
