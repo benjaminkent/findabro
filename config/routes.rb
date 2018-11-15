@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  get 'admin/index'
+  namespace :api do
+    resources :users, only: [:index, :show]
+  end
+
+  get 'admin', to: 'admin#index'
+  
   scope :admin do
     resources :users
   end
