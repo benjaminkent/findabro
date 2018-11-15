@@ -29,11 +29,7 @@ class UserEdit extends Component {
                 />
               </div>
               <div className="edit-name-location">
-                <input
-                  placeholder="Location"
-                  type="text"
-                  name="display-location"
-                />
+                <input placeholder="City" type="text" name="display-location" />
               </div>
               <div className="edit-image-container">
                 <p className="upload-image-text">Upload an Image, Brother</p>

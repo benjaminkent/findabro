@@ -15,19 +15,21 @@ class UserProfile extends Component {
                 <h3>Budding Brolationships</h3>
                 <i className="fas fa-exclamation-circle notification" />
               </div>
-              <Link className="back" to="/">
-                <i className="fas fa-caret-left back" />
-              </Link>
-              <div className="profile-name-container">
-                <div className="profile-name-locale">
-                  <p className="profile-name">Sample</p>
-                  <p>St. Pete, FL</p>
-                </div>
+              <div className="arrow-edit">
+                <Link className="back" to="/">
+                  <i className="fas fa-caret-left back" />
+                </Link>
                 <div className="user-edit">
                   <Link to="/edit" className="link-no-underline">
                     <p className="edit">Edit Profile</p>
                   </Link>
                   <i class="fas fa-arrow-right edit-arrow" />
+                </div>
+              </div>
+              <div className="profile-name-container">
+                <div className="profile-name-locale">
+                  <p className="profile-name">Sample</p>
+                  <p>St. Pete, FL</p>
                 </div>
               </div>
               <div className="profile-image-container">

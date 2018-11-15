@@ -10,6 +10,12 @@ p.edit {
   margin-top: 0;
 }
 
+.arrow-edit {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+}
+
 .profile-name-container {
   width: 100%;
   display: flex;
@@ -23,7 +29,7 @@ p.edit {
 
 .profile-name-locale p {
   margin: 0;
-  padding-left: 2rem;
+  padding-left: 2.5rem;
 }
 
 .profile-name {
@@ -33,6 +39,7 @@ p.edit {
 .user-edit {
   display: flex;
   padding-bottom: 1rem;
+  margin-top: 0.5rem;
 }
 
 .user-edit p {
@@ -45,7 +52,7 @@ p.edit {
 
 .edit-arrow {
   margin-top: 0.25rem;
-  margin-right: 2rem;
+  margin-right: 1rem;
   padding-left: 0.3rem;
   color: $primary-black;
 }
@@ -55,40 +62,24 @@ p.edit {
 }
 
 @media (min-width: 700px) {
-  .edit-arrow {
-    margin-right: 11rem;
-  }
-
   div.profile-name-locale {
     margin-left: 11rem;
   }
 }
 
 @media (min-width: 1000px) {
-  .edit-arrow {
-    margin-right: 1rem;
-  }
-
   div.profile-name-locale {
     margin-left: 0.5rem;
   }
 }
 
 @media (min-width: 1300px) {
-  .edit-arrow {
-    margin-right: 3rem;
-  }
-
   div.profile-name-locale {
     margin-left: 2rem;
   }
 }
 
 @media (min-width: 1600px) {
-  .edit-arrow {
-    margin-right: 4rem;
-  }
-
   div.profile-name-locale {
     margin-left: 3rem;
   }
