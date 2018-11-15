@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import ScrollToTop from './SubComponents/ScrollToTop'
+import ScrollToTop from './ScrollToTop'
 
 class MainPage extends Component {
   state = {

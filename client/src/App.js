@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import { HashRouter as Router, Route, Link, Switch } from 'react-router-dom'
+import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 
 import './App.css'
 
-import Header from './Components/SubComponents/Header'
-import Footer from './Components/SubComponents/Footer'
+import Header from './Components/Header'
+import Footer from './Components/Footer'
 import MainPage from './Components/MainPage'
 import UserEdit from './Components/UserEdit'
 import UserProfile from './Components/UserProfile'

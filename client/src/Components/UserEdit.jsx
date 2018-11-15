@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { HashRouter as Router, Route, Link, Switch } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-import ScrollToTop from './SubComponents/ScrollToTop'
+import ScrollToTop from './ScrollToTop'
 
 class UserEdit extends Component {
   render() {
