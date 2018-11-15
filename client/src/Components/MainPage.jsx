@@ -4,31 +4,26 @@ import ScrollToTop from './ScrollToTop'
 
 class MainPage extends Component {
   state = {
-    profile: [],
-    drink: 'Whiskey, Beer, Wine',
-    smoke: 'Sometimes',
-    smokeType: 'Cigars',
-    shave: 'Safety Razor',
-    workout: 'Often',
-    kids: 'No',
-    pets: 'Dog',
-    guns: 'Yes',
-    single: 'No',
-    videoGames: 'Sometimes',
-    boardGames: 'No',
-    sports: 'Yes',
-    outdoor: 'Yes'
+    profile: []
   }
 
   componentDidMount() {
     fetch('http://localhost:3000/api/users')
       .then(u => u.json())
-      .then(profile => {
-        this.setState({ profile })
+      .then(data => {
+        this.setState({ profile: data })
       })
   }
 
   render() {
+    if (this.state.profile.length === 0) {
+      return (
+        <>
+          <div className="loading">Loading...</div>
+        </>
+      )
+    }
+
     return (
       <>
         <ScrollToTop />
@@ -41,10 +36,10 @@ class MainPage extends Component {
               </div>
               <div className="name">
                 <div className="name-locale">
-                  <p>{this.state.profile.name}</p>
+                  <p>{this.state.profile[0].name}</p>
                   <p>{this.state.location}</p>
                 </div>
-                <p className="match">{this.state.match}% Match</p>
+                {/* <p className="match">{this.state.match}% Match</p> */}
               </div>
               <div className="image-container">
                 <img
