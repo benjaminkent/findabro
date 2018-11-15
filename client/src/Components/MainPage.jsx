@@ -4,9 +4,7 @@ import ScrollToTop from './ScrollToTop'
 
 class MainPage extends Component {
   state = {
-    name: 'Sample Bro',
-    location: 'St. Pete, FL',
-    match: '100',
+    profile: [],
     drink: 'Whiskey, Beer, Wine',
     smoke: 'Sometimes',
     smokeType: 'Cigars',
@@ -22,6 +20,14 @@ class MainPage extends Component {
     outdoor: 'Yes'
   }
 
+  componentDidMount() {
+    fetch('http://localhost:3000/api/users')
+      .then(u => u.json())
+      .then(profile => {
+        this.setState({ profile })
+      })
+  }
+
   render() {
     return (
       <>
@@ -35,7 +41,7 @@ class MainPage extends Component {
               </div>
               <div className="name">
                 <div className="name-locale">
-                  <p>{this.state.name}</p>
+                  <p>{this.state.profile.name}</p>
                   <p>{this.state.location}</p>
                 </div>
                 <p className="match">{this.state.match}% Match</p>
