@@ -19,7 +19,7 @@ class MainPage extends Component {
     if (this.state.profile.length === 0) {
       return (
         <>
-          <div className="loading">Loading...</div>
+          <div className="loading" />
         </>
       )
     }
@@ -37,7 +37,7 @@ class MainPage extends Component {
               <div className="name">
                 <div className="name-locale">
                   <p>{this.state.profile[0].name}</p>
-                  <p>{this.state.location}</p>
+                  <p>{this.state.profile[0].city}</p>
                 </div>
                 {/* <p className="match">{this.state.match}% Match</p> */}
               </div>
