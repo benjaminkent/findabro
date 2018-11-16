@@ -17,8 +17,8 @@ class UserEdit extends Component {
                   className="link-no-underline cancel-edit"
                   title="Back to the main screen"
                 >
-                  <i className="fas fa-arrow-left cancel-edit-back" />
                   <p>Cancel Edit</p>
+                  <i class="fas fa-ban cancel-edit-back" />
                 </Link>
               </div>
               <div className="edit-name-location">
