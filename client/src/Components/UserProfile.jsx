@@ -20,10 +20,10 @@ class UserProfile extends Component {
                   <i className="fas fa-caret-left back" />
                 </Link>
                 <div className="user-edit">
-                  <Link to="/edit" className="link-no-underline">
+                  <Link to="/edit-profile" className="link-no-underline">
                     <p className="edit">Edit Profile</p>
                   </Link>
-                  <i class="fas fa-arrow-right edit-arrow" />
+                  <i class="fas fa-user-edit edit-arrow" />
                 </div>
               </div>
               <div className="profile-name-container">

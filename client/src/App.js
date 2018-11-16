@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { HashRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import './App.css'
 
@@ -18,7 +18,7 @@ class App extends Component {
           <Header />
           <Switch>
             <Route exact path="/" component={MainPage} />
-            <Route path="/edit" component={UserEdit} />
+            <Route path="/edit-profile" component={UserEdit} />
             <Route path="/profile" component={UserProfile} />
             <Route path="/about" component={AboutPage} />
           </Switch>

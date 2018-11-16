@@ -4,7 +4,8 @@ import ScrollToTop from './ScrollToTop'
 
 class MainPage extends Component {
   state = {
-    profile: []
+    profile: [],
+    questions: []
   }
 
   componentDidMount() {
@@ -13,10 +14,22 @@ class MainPage extends Component {
       .then(data => {
         this.setState({ profile: data })
       })
+
+    fetch('http://localhost:3000/api/questions')
+      .then(q => q.json())
+      .then(data => {
+        this.setState({ questions: data })
+      })
   }
 
   render() {
     if (this.state.profile.length === 0) {
+      return (
+        <>
+          <div className="loading" />
+        </>
+      )
+    } else if (this.state.questions.length === 0) {
       return (
         <>
           <div className="loading" />
@@ -59,58 +72,14 @@ class MainPage extends Component {
             <div className="about-section-container">
               <h2 className="about-user">About {this.state.name}</h2>
               <div className="about-underline" />
-              <article className="about-questions">
-                <p>What do you like to drink?</p>
-                <p>{this.state.drink}</p>
-              </article>
-              <article className="about-questions">
-                <p>Do you smoke?</p>
-                <p>{this.state.smoke}</p>
-              </article>
-              <article className="about-questions">
-                <p>What do you smoke?</p>
-                <p>{this.state.smokeType}</p>
-              </article>
-              <article className="about-questions">
-                <p>How do you shave?</p>
-                <p>{this.state.shave}</p>
-              </article>
-              <article className="about-questions">
-                <p>Do you workout?</p>
-                <p>{this.state.workout}</p>
-              </article>
-              <article className="about-questions">
-                <p>Do you have kids?</p>
-                <p>{this.state.kids}</p>
-              </article>
-              <article className="about-questions">
-                <p>Do you have pets?</p>
-                <p>{this.state.pets}</p>
-              </article>
-              <article className="about-questions">
-                <p>Do you like guns?</p>
-                <p>{this.state.guns}</p>
-              </article>
-              <article className="about-questions">
-                <p>Are you single?</p>
-                <p>{this.state.single}</p>
-              </article>
-              <article className="about-questions">
-                <p>Do you play video games?</p>
-                <p>{this.state.videoGames}</p>
-              </article>
-              <article className="about-questions">
-                <p>Do you play board games?</p>
-                <p>{this.state.boardGames}</p>
-              </article>
-              <article className="about-questions">
-                <p>Do you like sports?</p>
-                <p>{this.state.sports}</p>
-              </article>
-              <article className="about-questions">
-                <p>Do you like outdoor activities?</p>
-                <p>{this.state.outdoor}</p>
-              </article>
+              {this.state.questions.map(question => {
+                return (
+                  <article key={question.id} className="about-questions">
+                    <p>{question.name}</p>
+                    <p>An answer</p>
+                  </article>
+                )
+              })}
             </div>
           </section>
 
