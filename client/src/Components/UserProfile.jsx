@@ -22,8 +22,8 @@ class UserProfile extends Component {
                 <div className="user-edit">
                   <Link to="/edit-profile" className="link-no-underline">
                     <p className="edit">Edit Profile</p>
+                    <i class="fas fa-user-edit edit-arrow" />
                   </Link>
-                  <i class="fas fa-user-edit edit-arrow" />
                 </div>
               </div>
               <div className="profile-name-container">
