@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :questions
   namespace :api do
     resources :users, only: [:index, :show]
   end
