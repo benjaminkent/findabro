@@ -19,8 +19,11 @@ class UserProfile extends Component {
                 <Link className="back" to="/">
                   <i className="fas fa-caret-left back" />
                 </Link>
-                <div className="user-edit">
-                  <Link to="/edit-profile" className="link-no-underline">
+                <div>
+                  <Link
+                    to="/edit-profile"
+                    className="link-no-underline user edit"
+                  >
                     <p className="edit">Edit Profile</p>
                     <i class="fas fa-user-edit edit-arrow" />
                   </Link>
