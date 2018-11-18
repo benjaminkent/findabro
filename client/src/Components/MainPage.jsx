@@ -16,8 +16,8 @@ class MainPage extends Component {
               </div>
               <div className="name">
                 <div className="name-locale">
-                  <p>{this.props.answers[0].user.name}</p>
-                  <p>{this.props.answers[0].user.city}</p>
+                  <p>{this.props.answers[0].info.name}</p>
+                  <p>{this.props.answers[0].info.city}</p>
                 </div>
                 {/* <p className="match">{this.state.match}% Match</p> */}
               </div>
@@ -38,14 +38,14 @@ class MainPage extends Component {
           <section className="about-section">
             <div className="about-section-container">
               <h2 className="about-user">
-                About {this.props.answers[0].user.name}
+                About {this.props.answers[0].info.name}
               </h2>
               <div className="about-underline" />
               {this.props.answers.map(answer => {
                 return (
                   <article key={answer.id} className="about-questions">
-                    <p>{answer.question.question}</p>
-                    <p>{answer.answer}</p>
+                    <p>{answer.info.question}</p>
+                    <p>{answer.info.answer}</p>
                   </article>
                 )
               })}

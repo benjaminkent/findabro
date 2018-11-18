@@ -3,17 +3,13 @@ class Api::AnswersController < ApplicationController
     @answers = Answer.all
     render json: @answers.map { |a|
       {
-        id: a.id,
-        answer: a.answer,
-        user: {
-          id: a.user.id,
-          name: a.user.name,
-          city: a.user.city
-        },
-        question: {
-          id: a.question.id,
-          question: a.question.name
-        }
+        id: a.user.id,
+          info: {
+            name: a.user.name,
+            city: a.user.city,
+            question: a.question.name,
+            answer: a.answer
+          }
       }
     }
   end
