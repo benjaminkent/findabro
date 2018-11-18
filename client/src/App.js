@@ -12,38 +12,26 @@ import AboutPage from './Components/AboutPage'
 
 class App extends Component {
   state = {
-    profile: [],
-    questions: []
+    answers: []
   }
 
   componentDidMount() {
-    fetch('http://localhost:3000/api/users')
-      .then(u => u.json())
+    fetch('/api/answers')
+      .then(a => a.json())
       .then(data => {
-        this.setState({ profile: data })
-      })
-
-    fetch('http://localhost:3000/api/questions')
-      .then(q => q.json())
-      .then(data => {
-        this.setState({ questions: data })
+        this.setState({ answers: data })
       })
   }
 
   render() {
-    if (this.state.profile.length === 0) {
-      return (
-        <>
-          <div className="loading" />
-        </>
-      )
-    } else if (this.state.questions.length === 0) {
+    if (this.state.answers.length === 0) {
       return (
         <>
           <div className="loading" />
         </>
       )
     }
+
     return (
       <Router>
         <>
@@ -53,11 +41,7 @@ class App extends Component {
               exact
               path="/"
               render={props => (
-                <MainPage
-                  {...props}
-                  profile={this.state.profile}
-                  questions={this.state.questions}
-                />
+                <MainPage {...props} answers={this.state.answers} />
               )}
             />
             <Route path="/edit-profile" component={UserEdit} />

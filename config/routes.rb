@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   namespace :api do
+    resources :answers, only: [:index, :show]
     resources :users, only: [:index, :show]
     resources :questions, only: [:index, :show]
   end
@@ -7,6 +8,7 @@ Rails.application.routes.draw do
   get 'admin', to: 'admin#index'
   
   scope :admin do
+    resources :answers
     resources :users
     resources :questions
   end
