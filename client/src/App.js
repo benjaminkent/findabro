@@ -9,31 +9,11 @@ import MainPage from './Components/MainPage'
 import UserEdit from './Components/UserEdit'
 import UserProfile from './Components/UserProfile'
 import AboutPage from './Components/AboutPage'
-import Callback from './Components/Callback'
-import Splash from './Components/Splash'
+// import Callback from './Components/Callback'
+// import Splash from './Components/Splash'
 
 class App extends Component {
-  state = {
-    answers: []
-  }
-
-  componentDidMount() {
-    fetch('/api/answers')
-      .then(a => a.json())
-      .then(data => {
-        this.setState({ answers: data })
-      })
-  }
-
   render() {
-    if (this.state.answers.length === 0) {
-      return (
-        <>
-          <div className="loading" />
-        </>
-      )
-    }
-
     return (
       <Router>
         <>
@@ -41,13 +21,7 @@ class App extends Component {
           {/* <Splash /> */}
           {/* <Callback /> */}
           <Switch>
-            <Route
-              exact
-              path="/"
-              render={props => (
-                <MainPage {...props} answers={this.state.answers} />
-              )}
-            />
+            <Route exact path="/" component={MainPage} />
             <Route path="/edit-profile" component={UserEdit} />
             <Route path="/profile" component={UserProfile} />
             <Route path="/about" component={AboutPage} />

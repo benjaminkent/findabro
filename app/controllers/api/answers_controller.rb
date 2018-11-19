@@ -15,6 +15,10 @@ class Api::AnswersController < ApplicationController
     }
   end
 
+  def match
+    @user = User.order("RANDOM()").first
+  end
+
   def show
     @answers = Answer.find(params[:id])
     render json:  {
