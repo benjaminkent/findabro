@@ -10,6 +10,7 @@ import UserEdit from './Components/UserEdit'
 import UserProfile from './Components/UserProfile'
 import AboutPage from './Components/AboutPage'
 import Callback from './Components/Callback'
+import Splash from './Components/Splash'
 
 class App extends Component {
   state = {
@@ -37,8 +38,9 @@ class App extends Component {
       <Router>
         <>
           <Header />
-          <Callback />
-          {/* <Switch>
+          {/* <Splash /> */}
+          {/* <Callback /> */}
+          <Switch>
             <Route
               exact
               path="/"
@@ -49,7 +51,7 @@ class App extends Component {
             <Route path="/edit-profile" component={UserEdit} />
             <Route path="/profile" component={UserProfile} />
             <Route path="/about" component={AboutPage} />
-          </Switch> */}
+          </Switch>
           <Footer />
         </>
       </Router>

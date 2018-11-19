@@ -43,3 +43,7 @@ Meme
 - admins can add answers
 - admins can add memes
 - admins can edit/destroy profiles
+
+api
+
+- users/1(user id)/answers
