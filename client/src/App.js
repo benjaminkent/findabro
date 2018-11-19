@@ -31,7 +31,10 @@ class App extends Component {
           <Header />
           <Switch>
             <Route path="/edit-profile" component={UserEdit} />
-            <Route path="/profile" component={UserProfile} />
+            <Route
+              path="/profile"
+              render={props => <UserProfile auth={auth} {...props} />}
+            />
             <Route path="/about" component={AboutPage} />
             <Route
               exact

@@ -4,6 +4,18 @@ import { Link } from 'react-router-dom'
 import ScrollToTop from './ScrollToTop'
 
 class UserProfile extends Component {
+  state = {
+    profile: ''
+  }
+
+  componentDidMount() {
+    if (this.props.auth.isAuthenticated()) {
+      this.props.auth.getProfile((err, profile) => {
+        this.setState({ profile, err })
+      })
+    }
+  }
+
   render() {
     return (
       <>
@@ -31,14 +43,16 @@ class UserProfile extends Component {
               </div>
               <div className="profile-name-container">
                 <div className="profile-name-locale">
-                  <p className="profile-name">Sample</p>
-                  <p>St. Pete, FL</p>
+                  <p className="profile-name">
+                    {this.state.profile.given_name}
+                  </p>
+                  <p>St Pete</p>
                 </div>
               </div>
               <div className="profile-image-container">
                 <img
                   className="user-image"
-                  src="./images/user-image.jpg"
+                  src={this.state.profile.picture}
                   alt="user"
                 />
               </div>

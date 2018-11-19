@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+import Callback from './Callback'
 import ScrollToTop from './ScrollToTop'
 
 class MainPage extends Component {
@@ -26,7 +27,7 @@ class MainPage extends Component {
     if (!this.state.user) {
       return (
         <>
-          <div className="loading" />
+          <Callback />
         </>
       )
     }
