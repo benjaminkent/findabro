@@ -9,6 +9,7 @@ import MainPage from './Components/MainPage'
 import UserEdit from './Components/UserEdit'
 import UserProfile from './Components/UserProfile'
 import AboutPage from './Components/AboutPage'
+import Callback from './Components/Callback'
 
 class App extends Component {
   state = {
@@ -36,7 +37,8 @@ class App extends Component {
       <Router>
         <>
           <Header />
-          <Switch>
+          <Callback />
+          {/* <Switch>
             <Route
               exact
               path="/"
@@ -47,7 +49,7 @@ class App extends Component {
             <Route path="/edit-profile" component={UserEdit} />
             <Route path="/profile" component={UserProfile} />
             <Route path="/about" component={AboutPage} />
-          </Switch>
+          </Switch> */}
           <Footer />
         </>
       </Router>

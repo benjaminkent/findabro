@@ -1,0 +1,16 @@
+.loading-image {
+  height: 15rem;
+  margin: 0 auto;
+}
+
+.loading {
+  margin-top: 3rem;
+  font-family: $arvo;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 15rem;
+}
