@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
+  
   namespace :api do
     resources :answers, only: [:index, :show] do
       collection do
         get :match
       end
     end
+    resources :thumbs, only: [:index, :show]
     resources :users, only: [:index, :show]
     resources :questions, only: [:index, :show]
   end
@@ -12,6 +14,7 @@ Rails.application.routes.draw do
   get 'admin', to: 'admin#index'
   
   scope :admin do
+    resources :thumbs
     resources :answers
     resources :users
     resources :questions

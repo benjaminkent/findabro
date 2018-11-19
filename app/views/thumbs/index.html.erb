@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Thumbs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @thumbs.each do |thumb| %>
+      <tr>
+        <td><%= thumber.name %></td>
+        <td><%= thumb.user %></td>
+        <td><%= link_to 'Show', thumb %></td>
+        <td><%= link_to 'Edit', edit_thumb_path(thumb) %></td>
+        <td><%= link_to 'Destroy', thumb, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Thumb', new_thumb_path %>

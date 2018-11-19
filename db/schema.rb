@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_18_193515) do
+ActiveRecord::Schema.define(version: 2018_11_19_194623) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,16 @@ ActiveRecord::Schema.define(version: 2018_11_18_193515) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "thumbs", force: :cascade do |t|
+    t.bigint "thumber_id"
+    t.bigint "thumbee_id"
+    t.boolean "is_up"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["thumbee_id"], name: "index_thumbs_on_thumbee_id"
+    t.index ["thumber_id"], name: "index_thumbs_on_thumber_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "slug"
@@ -43,4 +53,6 @@ ActiveRecord::Schema.define(version: 2018_11_18_193515) do
 
   add_foreign_key "answers", "questions"
   add_foreign_key "answers", "users"
+  add_foreign_key "thumbs", "users", column: "thumbee_id"
+  add_foreign_key "thumbs", "users", column: "thumber_id"
 end
