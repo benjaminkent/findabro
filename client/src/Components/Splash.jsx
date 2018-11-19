@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-// import Auth from '../auth/auth.js'
+import Auth from '../auth/auth.js'
 
-// const auth = new Auth()
+const auth = new Auth()
 
 class Splash extends Component {
-  // _login = () => {
-  //   auth.login()
-  // }
+  _login = () => {
+    auth.login()
+  }
 
   render() {
     return (
@@ -17,7 +17,9 @@ class Splash extends Component {
           </h1>
           <p className="splash-welcome">Have a blast here, friend!</p>
           <div>
-            <button className="login">Log In</button>
+            <button onClick={this._login} className="login">
+              Log In
+            </button>
           </div>
         </main>
       </div>

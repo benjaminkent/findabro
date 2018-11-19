@@ -16,7 +16,7 @@ class UserProfile extends Component {
                 <i className="fas fa-exclamation-circle notification" />
               </div>
               <div className="arrow-edit">
-                <Link className="back" to="/">
+                <Link className="back" to="/home">
                   <i className="fas fa-caret-left back" />
                 </Link>
                 <div>

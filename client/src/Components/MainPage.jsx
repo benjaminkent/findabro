@@ -4,19 +4,26 @@ import ScrollToTop from './ScrollToTop'
 
 class MainPage extends Component {
   state = {
-    profile: null
+    profile: '',
+    user: null
   }
 
   componentDidMount() {
     fetch('/api/answers/match')
       .then(a => a.json())
       .then(data => {
-        this.setState({ profile: data })
+        this.setState({ user: data })
       })
+
+    if (this.props.auth.isAuthenticated()) {
+      this.props.auth.getProfile((err, profile) => {
+        this.setState({ profile, err })
+      })
+    }
   }
 
   render() {
-    if (!this.state.profile) {
+    if (!this.state.user) {
       return (
         <>
           <div className="loading" />
@@ -35,8 +42,8 @@ class MainPage extends Component {
               </div>
               <div className="name">
                 <div className="name-locale">
-                  <p>{this.state.profile.name}</p>
-                  <p>{this.state.profile.city}</p>
+                  <p>{this.state.user.name}</p>
+                  <p>{this.state.user.city}</p>
                 </div>
                 {/* <p className="match">{this.state.match}% Match</p> */}
               </div>
@@ -56,9 +63,9 @@ class MainPage extends Component {
 
           <section className="about-section">
             <div className="about-section-container">
-              <h2 className="about-user">About {this.state.profile.name}</h2>
+              <h2 className="about-user">About {this.state.user.name}</h2>
               <div className="about-underline" />
-              {this.state.profile.answers.map(answer => {
+              {this.state.user.answers.map(answer => {
                 return (
                   <article key={answer.id} className="about-questions">
                     <p>{answer.question}</p>
