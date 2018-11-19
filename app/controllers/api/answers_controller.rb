@@ -7,7 +7,7 @@ class Api::AnswersController < ApplicationController
           info:{
             name: a.user.name,
             city: a.user.city,
-            question: a.question.name,
+            questions: a.question.name,
             answer: a.answer,
             auth: a.user.auth_id
           }
