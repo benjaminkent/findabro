@@ -4,11 +4,12 @@ class Api::AnswersController < ApplicationController
     render json: @answers.map { |a|
       {
         id: a.user.id,
-          info: {
+          info:{
             name: a.user.name,
             city: a.user.city,
             question: a.question.name,
-            answer: a.answer
+            answer: a.answer,
+            auth: a.user.auth_id
           }
       }
     }
