@@ -6,7 +6,6 @@ import './App.css'
 import Auth from './auth/auth'
 import history from './auth/history'
 
-// import Header from './Components/Header'
 import Footer from './Components/Footer'
 import MainPage from './Components/MainPage'
 import UserEdit from './Components/UserEdit'
@@ -28,7 +27,6 @@ class App extends Component {
     return (
       <Router history={history} component={App}>
         <>
-          {/* <Header /> */}
           <Switch>
             <Route path="/edit-profile" component={UserEdit} />
             <Route
