@@ -7,12 +7,13 @@ import ScrollToTop from './ScrollToTop'
 class UserEdit extends Component {
   _submit = event => {
     event.preventDefault()
+    const token = window.localStorage.getItem('id_token')
 
     fetch('/api/users/1/answers', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: 'Bearer ${token}'
+        Authorization: `Bearer ${token}`
       },
       body: JSON.stringify({
         message: 'Cool'

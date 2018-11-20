@@ -6,5 +6,11 @@ class User < ApplicationRecord
 
   has_many :thumbs_made, class_name: "Thumb", inverse_of: :thumber, foreign_key: :thumber_id
   has_many :thumbs_received, class_name: "Thumb", inverse_of: :thumbee, foreign_key: :thumbee_id
+
+  def self.from_auth_hash(payload)
+    User.find_or_create_by(auth_sub: payload["sub"]) do |user|
+      user.avatar_url = payload["picture"]
+      user.name = payload["given_name"]
+  end
   
 end
