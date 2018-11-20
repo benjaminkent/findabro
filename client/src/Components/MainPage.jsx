@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+import Header from './Header'
 import Callback from './Callback'
 import ScrollToTop from './ScrollToTop'
 
@@ -34,6 +35,7 @@ class MainPage extends Component {
     return (
       <>
         <ScrollToTop />
+        <Header />
         <div className="main-page-content">
           <section className="user-section">
             <div className="user-image-container">

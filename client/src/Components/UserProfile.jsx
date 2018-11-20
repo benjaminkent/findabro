@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
+import Header from './Header'
 import ScrollToTop from './ScrollToTop'
 
 class UserProfile extends Component {
@@ -20,6 +21,7 @@ class UserProfile extends Component {
     return (
       <>
         <ScrollToTop />
+        <Header />
         <div className="main-page-content">
           <section className="user-section">
             <div className="user-image-container">

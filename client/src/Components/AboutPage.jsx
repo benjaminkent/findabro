@@ -1,10 +1,15 @@
 import React, { Component } from 'react'
 
+import Header from './Header'
+import ScrollToTop from './ScrollToTop'
+
 class AboutPage extends Component {
   render() {
     let imgURL = './images/wolf-logo-light-yellow.png'
     return (
       <>
+        <ScrollToTop />
+        <Header />
         <section>
           <div
             className="about-page-main"
