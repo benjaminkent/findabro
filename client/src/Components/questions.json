@@ -1,0 +1,14 @@
+[
+  {
+    "type": "text",
+    "id": 2,
+    "question": "What do you like to drink?",
+    "answers": ["Whiskey", "Beer", "Wine", "Milk"]
+  },
+  {
+    "type": "text",
+    "id": 3,
+    "question": "What do you smoke?",
+    "answers": ["Cigs", "Vape", ";)", "Non-smoker"]
+  }
+]

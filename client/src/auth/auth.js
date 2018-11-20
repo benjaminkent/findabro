@@ -11,7 +11,7 @@ export default class Auth {
       window.location.host
     }/callback`,
     responseType: 'token id_token',
-    scope: 'openid profile'
+    scope: 'openid email profile'
   })
 
   constructor() {
