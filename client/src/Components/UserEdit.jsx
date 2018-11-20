@@ -20,7 +20,7 @@ class UserEdit extends Component {
                   title="Back to the main screen"
                 >
                   <p>Cancel Edit</p>
-                  <i class="fas fa-ban cancel-edit-back" />
+                  <i className="fas fa-ban cancel-edit-back" />
                 </Link>
               </div>
               <div className="edit-name-location">
@@ -52,7 +52,9 @@ class UserEdit extends Component {
               </p>
               <div className="about-underline" />
               <fieldset className="about-questions">
-                <p className="question">What is your favorite drink?</p>
+                <label htmlFor="drink" className="question">
+                  What is your favorite drink?
+                </label>
                 <div className="edit-answers">
                   <div className="radio-edits">
                     <input
@@ -102,7 +104,9 @@ class UserEdit extends Component {
                 </div>
               </fieldset>
               <article className="about-questions">
-                <p className="question">What do you smoke?</p>
+                <label htmlFor="smoke" className="question">
+                  What do you smoke?
+                </label>
                 <div className="edit-answers">
                   <div className="radio-edits">
                     <input
@@ -152,14 +156,16 @@ class UserEdit extends Component {
                 </div>
               </article>
               <article className="about-questions">
-                <p className="question">How do you shave?</p>
+                <label htmlFor="shave" className="question">
+                  How do you shave?
+                </label>
                 <div className="edit-answers">
                   <div className="radio-edits">
                     <input
                       className="radio"
                       type="radio"
                       name="shave"
-                      value="safety razor"
+                      value="safety-razor"
                     />
                     <label>safety razor</label>
                   </div>
@@ -168,7 +174,7 @@ class UserEdit extends Component {
                       className="radio"
                       type="radio"
                       name="shave"
-                      value="straight razor"
+                      value="straight-razor"
                     />
                     <label>straight razor</label>
                   </div>
@@ -177,14 +183,16 @@ class UserEdit extends Component {
                       className="radio"
                       type="radio"
                       name="shave"
-                      value="regular ass razor"
+                      value="regular-ass-razor"
                     />
                     <label>regular ass razor</label>
                   </div>
                 </div>
               </article>
               <article className="about-questions">
-                <p className="question">Do you workout?</p>
+                <label htmlFor="workout" className="question">
+                  Do you workout?
+                </label>
                 <div className="edit-answers">
                   <div className="radio-edits">
                     <input
@@ -216,7 +224,9 @@ class UserEdit extends Component {
                 </div>
               </article>
               <article className="about-questions">
-                <p className="question">Do you have kids?</p>
+                <label htmlFor="kids" className="question">
+                  Do you have kids?
+                </label>
                 <div className="edit-answers">
                   <div className="radio-edits">
                     <input
@@ -239,7 +249,9 @@ class UserEdit extends Component {
                 </div>
               </article>
               <article className="about-questions">
-                <p className="question">Do you have pets?</p>
+                <label htmlFor="pets" className="question">
+                  Do you have pets?
+                </label>
                 <div className="edit-answers">
                   <div className="radio-edits">
                     <input
@@ -280,7 +292,9 @@ class UserEdit extends Component {
                 </div>
               </article>
               <article className="about-questions">
-                <p className="question">Do you like guns?</p>
+                <label htmlFor="guns" className="question">
+                  Do you like guns?
+                </label>
                 <div className="edit-answers">
                   <div className="radio-edits">
                     <input
@@ -303,7 +317,9 @@ class UserEdit extends Component {
                 </div>
               </article>
               <article className="about-questions">
-                <p className="question">Are you single?</p>
+                <label htmlFor="single" className="question">
+                  Are you single?
+                </label>
                 <div className="edit-answers">
                   <div className="radio-edits">
                     <input
@@ -326,13 +342,15 @@ class UserEdit extends Component {
                 </div>
               </article>
               <article className="about-questions">
-                <p className="question">Do you play video games?</p>
+                <label htmlFor="video-games" className="question">
+                  Do you play video games?
+                </label>
                 <div className="edit-answers">
                   <div className="radio-edits">
                     <input
                       className="radio"
                       type="radio"
-                      name="video games"
+                      name="video-games"
                       value="often"
                     />
                     <label>often</label>
@@ -341,7 +359,7 @@ class UserEdit extends Component {
                     <input
                       className="radio"
                       type="radio"
-                      name="video games"
+                      name="video-games"
                       value="sometimes"
                     />
                     <label>sometimes</label>
@@ -350,7 +368,7 @@ class UserEdit extends Component {
                     <input
                       className="radio"
                       type="radio"
-                      name="video games"
+                      name="video-games"
                       value="never"
                     />
                     <label>never</label>
@@ -358,13 +376,15 @@ class UserEdit extends Component {
                 </div>
               </article>
               <article className="about-questions">
-                <p className="question">Do you play board games?</p>
+                <label htmlFor="board-games" className="question">
+                  Do you play board games?
+                </label>
                 <div className="edit-answers">
                   <div className="radio-edits">
                     <input
                       className="radio"
                       type="radio"
-                      name="board games"
+                      name="board-games"
                       value="often"
                     />
                     <label>often</label>
@@ -373,7 +393,7 @@ class UserEdit extends Component {
                     <input
                       className="radio"
                       type="radio"
-                      name="board games"
+                      name="board-games"
                       value="sometimes"
                     />
                     <label>sometimes</label>
@@ -382,7 +402,7 @@ class UserEdit extends Component {
                     <input
                       className="radio"
                       type="radio"
-                      name="board games"
+                      name="board-games"
                       value="never"
                     />
                     <label>never</label>
@@ -390,7 +410,9 @@ class UserEdit extends Component {
                 </div>
               </article>
               <article className="about-questions">
-                <p className="question">Do you like sports?</p>
+                <label htmlFor="sports" className="question">
+                  Do you like sports?
+                </label>
                 <div className="edit-answers">
                   <div className="radio-edits">
                     <input
@@ -413,13 +435,15 @@ class UserEdit extends Component {
                 </div>
               </article>
               <article className="about-questions">
-                <p className="question">Do you like outdoor activities?</p>
+                <label htmlFor="outdoor-activities" className="question">
+                  Do you like outdoor activities?
+                </label>
                 <div className="edit-answers">
                   <div className="radio-edits">
                     <input
                       className="radio"
                       type="radio"
-                      name="outdoor activities"
+                      name="outdoor-activities"
                       value="yes"
                     />
                     <label>yes</label>
@@ -428,7 +452,7 @@ class UserEdit extends Component {
                     <input
                       className="radio"
                       type="radio"
-                      name="outdoor activities"
+                      name="outdoor-activities"
                       value="no"
                     />
                     <label>no</label>
@@ -474,7 +498,9 @@ class UserEdit extends Component {
             </div>
             <div>
               <Link className="link-no-underline" to="profile">
-                <button className="submit">Submit Profile</button>
+                <button type="submit" className="submit">
+                  Submit Profile
+                </button>
               </Link>
             </div>
           </section>
