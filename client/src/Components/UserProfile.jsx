@@ -39,7 +39,7 @@ class UserProfile extends Component {
                     className="link-no-underline user-edit"
                   >
                     <p className="edit">Edit Profile</p>
-                    <i class="fas fa-user-edit edit-arrow" />
+                    <i className="fas fa-user-edit edit-arrow" />
                   </Link>
                 </div>
               </div>

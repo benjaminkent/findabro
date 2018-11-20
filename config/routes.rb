@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
   namespace :api do
-    resources :answers, only: [:index, :show] do
+    resources :answers, only: [:index, :show, :create] do
       collection do
         get :match
       end
