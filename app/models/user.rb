@@ -11,6 +11,7 @@ class User < ApplicationRecord
     User.find_or_create_by(auth_sub: payload["sub"]) do |user|
       user.avatar_url = payload["picture"]
       user.name = payload["given_name"]
+    end
   end
   
 end
