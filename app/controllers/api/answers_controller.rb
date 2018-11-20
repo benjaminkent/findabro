@@ -1,4 +1,6 @@
 class Api::AnswersController < ApplicationController
+  before_action :authenticate!, only: [:create]
+
   def index
     @answers = Answer.all
     render json: @answers.map { |a|
@@ -33,5 +35,15 @@ class Api::AnswersController < ApplicationController
         question: @answers.question.name
       }
     }
+  end
+
+  #   { q: 1, a: "Yes, I do in fact love cats." },
+
+  def create
+    answer = curent_user.answers.find_or_initialize_by(:question_id, params[:q])
+    answer.answer = params[:a]
+    answer.save!
+
+    render json: answer
   end
 end

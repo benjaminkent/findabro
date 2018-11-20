@@ -9,14 +9,14 @@ class UserEdit extends Component {
     event.preventDefault()
     const token = window.localStorage.getItem('id_token')
 
-    fetch('/api/users/1/answers', {
+    fetch('/api/answers', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${token}`
       },
       body: JSON.stringify({
-        message: 'Cool'
+        answers: { q: 1, a: 'yes' }
       })
     })
   }

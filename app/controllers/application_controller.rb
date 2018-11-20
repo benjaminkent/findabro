@@ -2,6 +2,10 @@ class ApplicationController < ActionController::Base
 
   private
 
+  def authenticate!
+    redirect_to :root unless current_user
+  end
+
   def current_user
     return nil if request.headers["Authorization"].blank?
     token = request.headers["Authorization"].split(" ").last
