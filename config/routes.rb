@@ -6,8 +6,14 @@ Rails.application.routes.draw do
         get :match
       end
     end
+    
+    resources :users, only: [:index, :show] do
+      collection do
+        get :profile
+      end
+    end
+    
     resources :thumbs, only: [:index, :show]
-    resources :users, only: [:index, :show]
     resources :questions, only: [:index, :show]
   end
 

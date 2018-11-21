@@ -9,7 +9,7 @@
     "type": "text",
     "id": 4,
     "question": "What do you smoke?",
-    "answers": ["Cigarettes", "Cigar", "Vape", "Other", "Non-smoker"]
+    "answers": ["Cigarettes", "Cigars", "Vape", "Other", "Non-smoker"]
   },
   {
     "type": "text",

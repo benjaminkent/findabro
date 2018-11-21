@@ -26,7 +26,6 @@ class UserEdit extends Component {
       .then(r => r.json())
       .then(data => {
         const { questionIndex } = this.state
-        // TODO, add if to guard for last question, then direct to other screen
         if (questionIndex < questions.length - 1) {
           this.setState({ questionIndex: questionIndex + 1 })
         } else {

@@ -6,10 +6,17 @@ import ScrollToTop from './ScrollToTop'
 
 class UserProfile extends Component {
   state = {
-    profile: ''
+    profile: '',
+    user: null
   }
 
   componentDidMount() {
+    fetch('/api/users/profile')
+      .then(a => a.json())
+      .then(data => {
+        this.setState({ user: data })
+      })
+
     if (this.props.auth.isAuthenticated()) {
       this.props.auth.getProfile((err, profile) => {
         this.setState({ profile, err })

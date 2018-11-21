@@ -37,8 +37,6 @@ class Api::AnswersController < ApplicationController
     }
   end
 
-  #   { q: 1, a: "Yes, I do in fact love cats." },
-
   def create
     answer = Answer.find_or_initialize_by(question_id: params[:q], user_id: current_user.id)
     answer.answer = params[:a]

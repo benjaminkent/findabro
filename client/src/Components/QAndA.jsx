@@ -6,7 +6,6 @@ class QAndA extends Component {
   }
 
   setAnswer = event => {
-    console.log(event.target.value)
     this.setState({ answer: event.target.value })
   }
 
