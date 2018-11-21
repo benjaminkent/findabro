@@ -4,17 +4,13 @@
   align-items: center;
 }
 
-input:enabled {
-  border: 3px solid $primary-mustard;
-}
-
 input:checked + .meme-select {
-  border: thick solid $primary-black;
+  border: thick solid $primary-mustard;
 }
 
 .meme-select {
   height: 14rem;
-  border: thick solid transparentize($primary-black, 0.8);
+  border: thick solid transparentize($primary-black, 1);
   border-radius: 10px;
   margin: 0 0 1rem 0;
 }

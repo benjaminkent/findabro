@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 import questions from './questions.json'
-import memes from './memes.json'
 
 import Header from './Header'
 import ScrollToTop from './ScrollToTop'
@@ -98,12 +97,7 @@ class UserEdit extends Component {
               <h2 className="about-user">Sense of Humor</h2>
               <p className="about-user-info">Pick your favorite meme</p>
               <div className="about-underline" />
-              <div className="meme-image-container">
-                {/* <MemeSelect
-                  {...memes[this.state.selectedIndex]}
-                  onSubmit={this._submit}
-                /> */}
-              </div>
+              <div className="meme-image-container" />
             </div>
             <div>
               <Link className="link-no-underline" to="profile">
