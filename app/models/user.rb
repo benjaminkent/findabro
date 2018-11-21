@@ -1,11 +1,12 @@
 class User < ApplicationRecord
-  has_many :answers
+  has_many :answers, dependent: :destroy
+  
   validates :name, presence: true
   validates :slug, presence: true
   validates :city, presence: true
 
-  has_many :thumbs_made, class_name: "Thumb", inverse_of: :thumber, foreign_key: :thumber_id
-  has_many :thumbs_received, class_name: "Thumb", inverse_of: :thumbee, foreign_key: :thumbee_id
+  has_many :thumbs_made, dependent: :destroy, class_name: "Thumb", inverse_of: :thumber, foreign_key: :thumber_id
+  has_many :thumbs_received, dependent: :destroy, class_name: "Thumb", inverse_of: :thumbee, foreign_key: :thumbee_id
 
   def self.from_auth_hash(payload)
     user = User.find_or_create_by(email: payload["email"])

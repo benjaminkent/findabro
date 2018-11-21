@@ -102,54 +102,6 @@ class UserProfile extends Component {
                   </article>
                 )
               })}
-              {/* <article className="about-questions">
-                <p>Do you smoke?</p>
-                <p>Sometimes</p>
-              </article>
-              <article className="about-questions">
-                <p>What do you smoke?</p>
-                <p>Cigars</p>
-              </article>
-              <article className="about-questions">
-                <p>How do you shave?</p>
-                <p>Safety Razor</p>
-              </article>
-              <article className="about-questions">
-                <p>Do you workout?</p>
-                <p>Often</p>
-              </article>
-              <article className="about-questions">
-                <p>Do you have kids?</p>
-                <p>No</p>
-              </article>
-              <article className="about-questions">
-                <p>Do you have pets?</p>
-                <p>Dog</p>
-              </article>
-              <article className="about-questions">
-                <p>Do you like guns?</p>
-                <p>Yes</p>
-              </article>
-              <article className="about-questions">
-                <p>Are you single?</p>
-                <p>No</p>
-              </article>
-              <article className="about-questions">
-                <p>Do you play video games?</p>
-                <p>Sometimes</p>
-              </article>
-              <article className="about-questions">
-                <p>Do you play board games?</p>
-                <p>No</p>
-              </article>
-              <article className="about-questions">
-                <p>Do you like sports?</p>
-                <p>Yes</p>
-              </article>
-              <article className="about-questions">
-                <p>Do you like outdoor activities?</p>
-                <p>Yes</p>
-              </article> */}
             </div>
           </section>
 

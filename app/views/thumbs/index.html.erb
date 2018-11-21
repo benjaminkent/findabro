@@ -14,8 +14,8 @@
   <tbody>
     <% @thumbs.each do |thumb| %>
       <tr>
-        <td><%= thumber.name %></td>
-        <td><%= thumb.user %></td>
+        <td><%= thumber.user.name %></td>
+        <td><%= thumb.user.name %></td>
         <td><%= link_to 'Show', thumb %></td>
         <td><%= link_to 'Edit', edit_thumb_path(thumb) %></td>
         <td><%= link_to 'Destroy', thumb, method: :delete, data: { confirm: 'Are you sure?' } %></td>
