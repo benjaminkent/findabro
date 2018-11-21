@@ -14,6 +14,7 @@ class MainPage extends Component {
     fetch('/api/answers/match')
       .then(a => a.json())
       .then(data => {
+        // console.log(data)
         this.setState({ user: data })
       })
 
@@ -32,6 +33,11 @@ class MainPage extends Component {
         </>
       )
     }
+
+    // const textAnswers = this.state.user.profile.answer.filter(
+    //   answer => answer.question_kind === 'text'
+    // )
+
     return (
       <>
         <ScrollToTop />
@@ -68,10 +74,10 @@ class MainPage extends Component {
             <div className="about-section-container">
               <h2 className="about-user">About {this.state.user.name}</h2>
               <div className="about-underline" />
-              {this.state.user.answers.map(answer => {
+              {this.state.user.answers.map((answer, index) => {
                 return (
-                  <article key={answer.id} className="about-questions">
-                    <p>{answer.question}</p>
+                  <article key={index} className="about-questions">
+                    <p>{answer.question.name}</p>
                     <p>{answer.answer}</p>
                   </article>
                 )
