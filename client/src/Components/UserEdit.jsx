@@ -111,10 +111,9 @@ class UserEdit extends Component {
                   src="./images/google-loser.png"
                   alt="meme"
                 />
-                <img className="meme" src="./images/break-up.jpg" alt="meme" />
+                <img className="meme" src="./images/split-up.jpg" alt="meme" />
                 <img className="meme" src="./images/gamer.jpg" alt="meme" />
                 <img className="meme" src="./images/oreo.jpg" alt="meme" />
-                <img className="meme" src="./images/password.jpg" alt="meme" />
                 <img className="meme" src="./images/sandwich.jpg" alt="meme" />
                 <img
                   className="meme"

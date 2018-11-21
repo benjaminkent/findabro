@@ -1,0 +1,32 @@
+[
+  {
+    "type": "image",
+    "id": 1,
+    "collection": "Collection 1",
+    "answers": [
+      "./images/vampire.jpg",
+      "./images/always-sunny.jpg",
+      "./images/bank-account.jpg"
+    ]
+  },
+  {
+    "type": "image",
+    "id": 2,
+    "question": "Collection 2",
+    "answers": [
+      "./images/sandwich.jpg",
+      "./images/google-loser.png",
+      "./images/gamer.jpg"
+    ]
+  },
+  {
+    "type": "image",
+    "id": 3,
+    "question": "Collection 3",
+    "answers": [
+      "./images/split-up.jpg",
+      "./images/oreo.jpg",
+      "./images/stonehenge.jpg"
+    ]
+  }
+]
