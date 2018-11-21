@@ -68,6 +68,17 @@ label {
   flex-direction: column;
 }
 
+.edit-profile-about {
+  margin: 2rem;
+  text-align: center;
+  color: $primary-black;
+}
+
+.edit-profile-about h4 {
+  font-family: $arvo;
+  font-size: 1.5rem;
+}
+
 input.radio {
   -webkit-appearance: none;
   -moz-appearance: none;

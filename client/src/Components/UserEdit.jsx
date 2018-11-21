@@ -61,12 +61,16 @@ class UserEdit extends Component {
                   name="display-name"
                 />
               </div> */}
-              <div className="edit-name-location">
+              {/* <div className="edit-name-location">
                 <input
                   placeholder="Enter City"
                   type="text"
                   name="display-location"
                 />
+              </div> */}
+              <div className="edit-profile-about">
+                <h4>Let other bros know about some of the things you like!</h4>
+                <p>Update your profile by answering the questions below.</p>
               </div>
               {/* <div className="edit-image-container">
                 <p className="upload-image-text">Upload an Image, Brother</p>
@@ -78,35 +82,11 @@ class UserEdit extends Component {
               </div> */}
             </div>
           </section>
-          <section className="about-section">
-            <div className="about-section-container">
-              <h2 className="about-user">About You</h2>
-              <p className="about-user-info">
-                Answer a few questions about yourself
-              </p>
-              <div className="about-underline" />
-              {currentQuestion.type === 'text' ? (
-                <QAndA {...currentQuestion} onSubmit={this._submit} />
-              ) : (
-                <MemeSelect {...currentQuestion} onSubmit={this._submit} />
-              )}
-            </div>
-          </section>
-          <section className="humor-section">
-            <div className="meme-section-container">
-              <h2 className="about-user">Sense of Humor</h2>
-              <p className="about-user-info">Pick your favorite meme</p>
-              <div className="about-underline" />
-              <div className="meme-image-container" />
-            </div>
-            <div>
-              <Link className="link-no-underline" to="profile">
-                <button type="submit" className="submit">
-                  Submit Profile
-                </button>
-              </Link>
-            </div>
-          </section>
+          {currentQuestion.type === 'text' ? (
+            <QAndA {...currentQuestion} onSubmit={this._submit} />
+          ) : (
+            <MemeSelect {...currentQuestion} onSubmit={this._submit} />
+          )}
         </div>
       </>
     )

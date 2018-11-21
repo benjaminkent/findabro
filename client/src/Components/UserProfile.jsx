@@ -55,7 +55,8 @@ class UserProfile extends Component {
                   <p className="profile-name">
                     {this.state.profile.given_name}
                   </p>
-                  <p>St Pete</p>
+                  {/* below p is where the location will go */}
+                  <p />
                 </div>
               </div>
               <div className="profile-image-container">
@@ -148,7 +149,7 @@ class UserProfile extends Component {
                   src="./images/google-loser.png"
                   alt="meme"
                 />
-                <img className="meme" src="./images/break-up.jpg" alt="meme" />
+                <img className="meme" src="./images/split-up.jpg" alt="meme" />
               </div>
             </div>
           </section>
