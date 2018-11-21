@@ -111,18 +111,6 @@ input.radio:checked {
   font-family: $arvo;
 }
 
-.submit {
-  margin: 1rem auto 3rem auto;
-  display: flex;
-  justify-content: center;
-  font-family: $arvo;
-  font-size: 1.5rem;
-  border-radius: 10px;
-  background-color: $primary-mustard;
-  color: $primary-black;
-  border: 1px solid $primary-black;
-}
-
 .submit-answer {
   margin: 1rem auto 1rem auto;
   display: flex;
@@ -135,11 +123,11 @@ input.radio:checked {
   border: 1px solid $primary-black;
 }
 
-.submit:focus {
+.submit-answer:focus {
   outline-color: $primary-mustard;
 }
 
-.submit:hover {
+.submit-answer:hover {
   transition: 0.2s all ease-in-out;
   color: $primary-mustard;
   background-color: $primary-black;
