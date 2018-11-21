@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom'
 
 import Header from './Header'
 import ScrollToTop from './ScrollToTop'
+import Callback from './Callback'
 
 class UserProfile extends Component {
   state = {
     profile: '',
-    user: null
+    user: ''
   }
 
   componentDidMount() {
@@ -31,6 +32,22 @@ class UserProfile extends Component {
   }
 
   render() {
+    if (!this.state.user) {
+      return (
+        <>
+          <Callback />
+        </>
+      )
+    }
+
+    const textAnswers = this.state.user.profile.answers.filter(
+      answer => answer.question_kind === 'text'
+    )
+
+    const imageAnswers = this.state.user.profile.answers.filter(
+      answer => answer.question_kind === 'image'
+    )
+
     return (
       <>
         <ScrollToTop />
@@ -58,9 +75,7 @@ class UserProfile extends Component {
               </div>
               <div className="profile-name-container">
                 <div className="profile-name-locale">
-                  <p className="profile-name">
-                    {this.state.profile.given_name}
-                  </p>
+                  <p className="profile-name">{this.state.user.profile.name}</p>
                   {/* below p is where the location will go */}
                   <p />
                 </div>
@@ -68,7 +83,7 @@ class UserProfile extends Component {
               <div className="profile-image-container">
                 <img
                   className="user-image"
-                  src={this.state.profile.picture}
+                  src={this.state.user.profile.avatar_url}
                   alt="user"
                 />
               </div>
@@ -79,11 +94,15 @@ class UserProfile extends Component {
             <div className="about-section-container">
               <h2 className="about-user">About Sample</h2>
               <div className="about-underline" />
-              <article className="about-questions">
-                <p>What do you like to drink?</p>
-                <p>Whiskey, Beer, Wine</p>
-              </article>
-              <article className="about-questions">
+              {textAnswers.map((answer, index) => {
+                return (
+                  <article className="about-questions" key={index}>
+                    <p>{answer.question_name}</p>
+                    <p>{answer.answer}</p>
+                  </article>
+                )
+              })}
+              {/* <article className="about-questions">
                 <p>Do you smoke?</p>
                 <p>Sometimes</p>
               </article>
@@ -130,7 +149,7 @@ class UserProfile extends Component {
               <article className="about-questions">
                 <p>Do you like outdoor activities?</p>
                 <p>Yes</p>
-              </article>
+              </article> */}
             </div>
           </section>
 
@@ -139,23 +158,14 @@ class UserProfile extends Component {
               <h2 className="about-user">Sense of Humor</h2>
               <div className="about-underline" />
               <div className="meme-image-container">
-                <img className="meme" src="./images/vampire.jpg" alt="meme" />
-                <img
-                  className="meme"
-                  src="./images/always-sunny.jpg"
-                  alt="meme"
-                />
-                <img
-                  className="meme"
-                  src="./images/bank-account.jpg"
-                  alt="meme"
-                />
-                <img
-                  className="meme"
-                  src="./images/google-loser.png"
-                  alt="meme"
-                />
-                <img className="meme" src="./images/split-up.jpg" alt="meme" />
+                {imageAnswers.map((answer, index) => (
+                  <img
+                    key={index}
+                    className="meme"
+                    alt="answer"
+                    src={answer.answer}
+                  />
+                ))}
               </div>
             </div>
           </section>
