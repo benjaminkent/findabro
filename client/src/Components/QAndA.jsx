@@ -14,9 +14,7 @@ class QAndA extends Component {
       <>
         <div>
           <fieldset className="about-questions">
-            <label htmlFor="drink" className="question">
-              {this.props.question}
-            </label>
+            <label className="question">{this.props.question}</label>
             {this.props.answers.map(answer => (
               <div className="edit-answers" key={answer}>
                 <div className="radio-edits">

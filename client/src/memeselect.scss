@@ -1,0 +1,32 @@
+.meme-label {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+input:enabled {
+  border: 3px solid $primary-mustard;
+}
+
+.meme-select {
+  height: 14rem;
+  border: 1px solid $primary-black;
+  border-radius: 10px;
+  margin: 0 0 1rem 0;
+}
+
+.radio-meme {
+  display: none;
+}
+
+.meme-collection {
+  text-align: center;
+  font-family: $arvo;
+  margin-bottom: 0.5rem;
+}
+
+.meme-questions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

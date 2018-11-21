@@ -1,26 +1,34 @@
 import React, { Component } from 'react'
 
+import memes from './memes.json'
+
 class MemeSelect extends Component {
+  state = {
+    selected: ''
+  }
+
+  setAnswer = event => {
+    this.setState({ selected: event.target.value })
+  }
+
   render() {
     return (
       <>
         <div>
-          <fieldset className="about-questions">
-            <label htmlFor="drink" className="question">
-              {this.props.question}
-            </label>
-            {this.props.answers.map(answer => (
-              <div className="edit-answers" key={answer}>
+          <fieldset className="meme-questions">
+            <label className="meme-collection">{this.props.collection}</label>
+            {this.props.answers.map(meme => (
+              <div className="edit-answers">
                 <div className="radio-edits">
-                  <label>
+                  <label className="meme-label">
                     <input
-                      className="radio"
+                      className="radio radio-meme"
                       type="radio"
-                      checked={this.state.answer === answer}
-                      value={answer}
+                      checked={this.state.selected === meme}
+                      value={meme}
                       onChange={this.setAnswer}
                     />
-                    {answer}
+                    <img className="meme-select" src={meme} alt="meme" />
                   </label>
                 </div>
               </div>
@@ -31,7 +39,7 @@ class MemeSelect extends Component {
           type="submit"
           className="submit-answer"
           onClick={() => {
-            this.props.onSubmit(this.props.id, this.state.answer)
+            this.props.onSubmit(this.props.id, this.state.selected)
           }}
         >
           Submit Answer

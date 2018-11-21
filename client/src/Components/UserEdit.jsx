@@ -2,14 +2,17 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 import questions from './questions.json'
+import memes from './memes.json'
 
 import Header from './Header'
 import ScrollToTop from './ScrollToTop'
 import QAndA from './QAndA'
+import MemeSelect from './MemeSelect'
 
 class UserEdit extends Component {
   state = {
-    questionIndex: 0
+    questionIndex: 0,
+    selectedIndex: 0
   }
 
   _submit = (id, answer) => {
@@ -92,33 +95,12 @@ class UserEdit extends Component {
           <section className="humor-section">
             <div className="meme-section-container">
               <h2 className="about-user">Sense of Humor</h2>
-              <p className="about-user-info">Pick your 5 favorite memes</p>
+              <p className="about-user-info">Pick your favorite meme</p>
               <div className="about-underline" />
               <div className="meme-image-container">
-                <img className="meme" src="./images/vampire.jpg" alt="meme" />
-                <img
-                  className="meme"
-                  src="./images/always-sunny.jpg"
-                  alt="meme"
-                />
-                <img
-                  className="meme"
-                  src="./images/bank-account.jpg"
-                  alt="meme"
-                />
-                <img
-                  className="meme"
-                  src="./images/google-loser.png"
-                  alt="meme"
-                />
-                <img className="meme" src="./images/split-up.jpg" alt="meme" />
-                <img className="meme" src="./images/gamer.jpg" alt="meme" />
-                <img className="meme" src="./images/oreo.jpg" alt="meme" />
-                <img className="meme" src="./images/sandwich.jpg" alt="meme" />
-                <img
-                  className="meme"
-                  src="./images/stonehenge.jpg"
-                  alt="meme"
+                <MemeSelect
+                  {...memes[this.state.selectedIndex]}
+                  onSubmit={this._submit}
                 />
               </div>
             </div>
