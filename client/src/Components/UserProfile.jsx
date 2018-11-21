@@ -11,7 +11,13 @@ class UserProfile extends Component {
   }
 
   componentDidMount() {
-    fetch('/api/users/profile')
+    const token = window.localStorage.getItem('id_token')
+    fetch('/api/users/profile', {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`
+      }
+    })
       .then(a => a.json())
       .then(data => {
         this.setState({ user: data })

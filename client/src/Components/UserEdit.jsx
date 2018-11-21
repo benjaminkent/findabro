@@ -10,7 +10,7 @@ import MemeSelect from './MemeSelect'
 
 class UserEdit extends Component {
   state = {
-    questionIndex: 11
+    questionIndex: 1
   }
 
   _submit = (id, answer) => {

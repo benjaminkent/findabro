@@ -100,7 +100,7 @@ class MainPage extends Component {
                   src="./images/google-loser.png"
                   alt="meme"
                 />
-                <img className="meme" src="./images/break-up.jpg" alt="meme" />
+                <img className="meme" src="./images/split-up.jpg" alt="meme" />
               </div>
             </div>
           </section>
