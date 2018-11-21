@@ -3,12 +3,72 @@
     "type": "text",
     "id": 2,
     "question": "What do you like to drink?",
-    "answers": ["Whiskey", "Beer", "Wine", "Milk"]
+    "answers": ["Whiskey", "Beer", "Wine", "Other", "Non-Drinker"]
   },
   {
     "type": "text",
-    "id": 3,
+    "id": 4,
     "question": "What do you smoke?",
-    "answers": ["Cigs", "Vape", ";)", "Non-smoker"]
+    "answers": ["Cigarettes", "Cigar", "Vape", "Other", "Non-smoker"]
+  },
+  {
+    "type": "text",
+    "id": 5,
+    "question": "How do you shave?",
+    "answers": ["Safety Razor", "Straight Razor", "Regular Ass Razor"]
+  },
+  {
+    "type": "text",
+    "id": 6,
+    "question": "Do you workout?",
+    "answers": ["Often", "Sometimes", "Never"]
+  },
+  {
+    "type": "text",
+    "id": 7,
+    "question": "Do you have kids?",
+    "answers": ["Yes", "No"]
+  },
+  {
+    "type": "text",
+    "id": 8,
+    "question": "Do you have pets?",
+    "answers": ["Dog", "Cat", "Reptile", "Other", "No"]
+  },
+  {
+    "type": "text",
+    "id": 9,
+    "question": "Do you like guns?",
+    "answers": ["Yes", "No"]
+  },
+  {
+    "type": "text",
+    "id": 10,
+    "question": "Are you single?",
+    "answers": ["Yes", "No"]
+  },
+  {
+    "type": "text",
+    "id": 11,
+    "question": "Do you play video games?",
+    "answers": ["Often", "Sometimes", "Never"]
+  },
+  {
+    "type": "text",
+    "id": 12,
+    "question": "Do you play board games?",
+    "answers": ["Often", "Sometimes", "Never"]
+  },
+  {
+    "type": "text",
+    "id": 13,
+    "question": "Do you like sports?",
+    "answers": ["Yes", "No"]
+  },
+  {
+    "type": "text",
+    "id": 14,
+    "question": "Do you like outdoor activities?",
+    "answers": ["Yes", "No"]
   }
 ]
