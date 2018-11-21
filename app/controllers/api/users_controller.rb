@@ -12,6 +12,6 @@ class Api::UsersController < ApplicationController
   end
 
   def profile
-    render json: current_user
+    @user = current_user
   end
 end

@@ -4,4 +4,10 @@ class Answer < ApplicationRecord
   validates :user, presence: true
   validates :question, presence: true
   validates :answer, presence: true
+  
+  # delegate is the same as below
+  delegate :name, to: :question, prefix: true
+  # def question_name
+  #   question.name
+  # end
 end

@@ -8,9 +8,10 @@ class User < ApplicationRecord
   has_many :thumbs_received, class_name: "Thumb", inverse_of: :thumbee, foreign_key: :thumbee_id
 
   def self.from_auth_hash(payload)
-    User.find_or_create_by(email: payload["email"]) do |user|
-      user.avatar_url = payload["picture"]
-      user.name = payload["given_name"]
-    end
+    user = User.find_or_create_by(email: payload["email"])
+    
+    user.update(avatar_url: payload["picture"], name: payload["given_name"])
+
+    user
   end
 end
