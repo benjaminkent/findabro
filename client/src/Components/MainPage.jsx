@@ -14,7 +14,6 @@ class MainPage extends Component {
     fetch('/api/answers/match')
       .then(a => a.json())
       .then(data => {
-        // console.log(data)
         this.setState({ user: data })
       })
 
@@ -34,9 +33,13 @@ class MainPage extends Component {
       )
     }
 
-    // const textAnswers = this.state.user.profile.answer.filter(
-    //   answer => answer.question_kind === 'text'
-    // )
+    const textAnswers = this.state.user.answers.filter(
+      answer => answer.question.kind === 'text'
+    )
+
+    const imageAnswers = this.state.user.answers.filter(
+      answer => answer.question.kind === 'image'
+    )
 
     return (
       <>
@@ -52,14 +55,15 @@ class MainPage extends Component {
               <div className="name">
                 <div className="name-locale">
                   <p>{this.state.user.name}</p>
-                  <p>{this.state.user.city}</p>
+                  {/* this p is where the city will go */}
+                  <p />
                 </div>
                 {/* <p className="match">{this.state.match}% Match</p> */}
               </div>
               <div className="image-container">
                 <img
                   className="user-image"
-                  src="./images/shuffle.jpeg"
+                  src={this.state.user.avatar_url}
                   alt="user"
                 />
               </div>
@@ -74,7 +78,7 @@ class MainPage extends Component {
             <div className="about-section-container">
               <h2 className="about-user">About {this.state.user.name}</h2>
               <div className="about-underline" />
-              {this.state.user.answers.map((answer, index) => {
+              {textAnswers.map((answer, index) => {
                 return (
                   <article key={index} className="about-questions">
                     <p>{answer.question.name}</p>
@@ -90,23 +94,16 @@ class MainPage extends Component {
               <h2 className="about-user">Sense of Humor</h2>
               <div className="about-underline" />
               <div className="meme-image-container">
-                <img className="meme" src="./images/vampire.jpg" alt="meme" />
-                <img
-                  className="meme"
-                  src="./images/always-sunny.jpg"
-                  alt="meme"
-                />
-                <img
-                  className="meme"
-                  src="./images/bank-account.jpg"
-                  alt="meme"
-                />
-                <img
-                  className="meme"
-                  src="./images/google-loser.png"
-                  alt="meme"
-                />
-                <img className="meme" src="./images/split-up.jpg" alt="meme" />
+                {imageAnswers.map((image, index) => {
+                  return (
+                    <img
+                      key={index}
+                      className="meme"
+                      src={image.answer}
+                      alt="meme"
+                    />
+                  )
+                })}
               </div>
             </div>
           </section>

@@ -92,7 +92,7 @@ class UserProfile extends Component {
 
           <section className="about-section">
             <div className="about-section-container">
-              <h2 className="about-user">About Sample</h2>
+              <h2 className="about-user">About You</h2>
               <div className="about-underline" />
               {textAnswers.map((answer, index) => {
                 return (

@@ -1,4 +1,4 @@
-json.(@user, :id, :name, :city)
+json.(@user, :id, :name, :city, :avatar_url)
 
 json.answers @user.answers do |answer|
   json.answer answer.answer
