@@ -74,7 +74,7 @@
   {
     "type": "image",
     "id": 15,
-    "question": "Collection 1",
+    "question": "Collection One",
     "answers": [
       "./images/vampire.jpg",
       "./images/always-sunny.jpg",
@@ -84,7 +84,7 @@
   {
     "type": "image",
     "id": 16,
-    "question": "Collection 2",
+    "question": "Collection Two",
     "answers": [
       "./images/sandwich.jpg",
       "./images/google-loser.png",
@@ -94,7 +94,7 @@
   {
     "type": "image",
     "id": 17,
-    "question": "Collection 3",
+    "question": "Collection Three",
     "answers": [
       "./images/split-up.jpg",
       "./images/oreo.jpg",
