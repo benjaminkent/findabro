@@ -70,5 +70,35 @@
     "id": 14,
     "question": "Do you like outdoor activities?",
     "answers": ["Yes", "No"]
+  },
+  {
+    "type": "image",
+    "id": 15,
+    "question": "Collection 1",
+    "answers": [
+      "./images/vampire.jpg",
+      "./images/always-sunny.jpg",
+      "./images/bank-account.jpg"
+    ]
+  },
+  {
+    "type": "image",
+    "id": 16,
+    "question": "Collection 2",
+    "answers": [
+      "./images/sandwich.jpg",
+      "./images/google-loser.png",
+      "./images/gamer.jpg"
+    ]
+  },
+  {
+    "type": "image",
+    "id": 17,
+    "question": "Collection 3",
+    "answers": [
+      "./images/split-up.jpg",
+      "./images/oreo.jpg",
+      "./images/stonehenge.jpg"
+    ]
   }
 ]

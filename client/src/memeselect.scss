@@ -8,9 +8,13 @@ input:enabled {
   border: 3px solid $primary-mustard;
 }
 
+input:checked + .meme-select {
+  border: thick solid $primary-black;
+}
+
 .meme-select {
   height: 14rem;
-  border: 1px solid $primary-black;
+  border: thick solid transparentize($primary-black, 0.8);
   border-radius: 10px;
   margin: 0 0 1rem 0;
 }

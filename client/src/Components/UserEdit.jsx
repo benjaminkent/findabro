@@ -11,8 +11,7 @@ import MemeSelect from './MemeSelect'
 
 class UserEdit extends Component {
   state = {
-    questionIndex: 0,
-    selectedIndex: 0
+    questionIndex: 11
   }
 
   _submit = (id, answer) => {
@@ -38,6 +37,7 @@ class UserEdit extends Component {
   }
 
   render() {
+    const currentQuestion = questions[this.state.questionIndex]
     return (
       <>
         <ScrollToTop />
@@ -86,10 +86,11 @@ class UserEdit extends Component {
                 Answer a few questions about yourself
               </p>
               <div className="about-underline" />
-              <QAndA
-                {...questions[this.state.questionIndex]}
-                onSubmit={this._submit}
-              />
+              {currentQuestion.type === 'text' ? (
+                <QAndA {...currentQuestion} onSubmit={this._submit} />
+              ) : (
+                <MemeSelect {...currentQuestion} onSubmit={this._submit} />
+              )}
             </div>
           </section>
           <section className="humor-section">
@@ -98,10 +99,10 @@ class UserEdit extends Component {
               <p className="about-user-info">Pick your favorite meme</p>
               <div className="about-underline" />
               <div className="meme-image-container">
-                <MemeSelect
+                {/* <MemeSelect
                   {...memes[this.state.selectedIndex]}
                   onSubmit={this._submit}
-                />
+                /> */}
               </div>
             </div>
             <div>

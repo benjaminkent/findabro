@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 
-import memes from './memes.json'
-
 class MemeSelect extends Component {
   state = {
     selected: ''
@@ -16,7 +14,7 @@ class MemeSelect extends Component {
       <>
         <div>
           <fieldset className="meme-questions">
-            <label className="meme-collection">{this.props.collection}</label>
+            <label className="meme-collection">{this.props.question}</label>
             {this.props.answers.map(meme => (
               <div className="edit-answers">
                 <div className="radio-edits">
