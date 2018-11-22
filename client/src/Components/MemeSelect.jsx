@@ -16,7 +16,7 @@ class MemeSelect extends Component {
           <section className="humor-section">
             <div className="meme-section-container">
               <h2 className="about-user">Sense of Humor</h2>
-              <p className="about-user-info">Pick your favorite meme</p>
+              <p className="about-user-info">Much Humor</p>
               <div className="about-underline" />
               <fieldset className="meme-questions">
                 <label className="meme-collection">{this.props.question}</label>

@@ -16,9 +16,7 @@ class QAndA extends Component {
           <section className="about-section">
             <div className="about-section-container">
               <h2 className="about-user">About You</h2>
-              <p className="about-user-info">
-                Answer a few questions about yourself
-              </p>
+              <p className="about-user-info">Ohhh Such Fun</p>
               <div className="about-underline" />
               <fieldset className="about-questions">
                 <label className="question">{this.props.question}</label>
