@@ -1,6 +1,6 @@
 {
   "private": true,
   "scripts": {
-    "install": "cd client && npm install $$ npm build"
+    "install": "cd client && npm install && npm build"
   }
 }
