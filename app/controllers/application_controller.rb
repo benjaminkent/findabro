@@ -1,6 +1,14 @@
 class ApplicationController < ActionController::Base
   skip_before_action :verify_authenticity_token
 
+  def fallback_index_html
+    if Rails.env.production?
+      render :file => "public/index.html", layout: false
+    else
+      redirect_to "/admin"
+    end
+  end
+
   private
 
   def authenticate!
