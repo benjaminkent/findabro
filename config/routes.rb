@@ -31,9 +31,9 @@ Rails.application.routes.draw do
     resources :questions, only: [:index, :show]
   end
 
-  get 'admin', to: 'admin#index'
+  get 'admin104752210', to: 'admin#index'
   
-  scope :admin do
+  scope :admin104752210 do
     resources :thumbs
     resources :answers
     resources :users
