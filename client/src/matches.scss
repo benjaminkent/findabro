@@ -1,5 +1,6 @@
 .matches-headline {
   padding-top: 5rem;
+  padding-bottom: 0.5rem;
   margin: 0;
   font-family: $arvo;
   font-size: 1.5rem;
@@ -28,4 +29,5 @@
 .match-name-email {
   margin-left: 1rem;
   font-family: $arvo;
+  color: $primary-black;
 }

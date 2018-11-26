@@ -43,21 +43,22 @@ class Matches extends Component {
         <h1 className="matches-headline">
           These are the bros you've matched with!
         </h1>
-        {/* {
-          this.state.match.map()
-        } */}
-        <div className="matches">
-          <img
-            className="match-image"
-            src={this.state.matches[0].avatar_url}
-            alt="profile"
-          />
-          <div className="match-name-email">
-            <p className="match-name">{this.state.matches[0].name}</p>
-            {/* nice to have, add messaging */}
-            {/* <p className="match-name">Send a Message to ...</p> */}
-          </div>
-        </div>
+        {this.state.matches.map(match => {
+          return (
+            <div className="matches">
+              <img
+                className="match-image"
+                src={match.avatar_url}
+                alt="profile"
+              />
+              <div className="match-name-email">
+                <p className="match-name">{match.name}</p>
+                {/* nice to have, add messaging */}
+                <p className="match-name">Send a Message to {match.name}</p>
+              </div>
+            </div>
+          )
+        })}
       </>
     )
   }
