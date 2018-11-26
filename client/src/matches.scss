@@ -1,0 +1,31 @@
+.matches-headline {
+  padding-top: 5rem;
+  margin: 0;
+  font-family: $arvo;
+  font-size: 1.5rem;
+  color: $primary-mustard;
+  text-align: center;
+  background-color: $primary-black;
+}
+
+.match-link {
+  color: $primary-mustard;
+}
+
+.match-image {
+  height: 6rem;
+  margin: 0.2rem 0;
+  padding-left: 0.5rem;
+}
+
+.matches {
+  border-bottom: 1px solid #363d5b35;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+}
+
+.match-name-email {
+  margin-left: 1rem;
+  font-family: $arvo;
+}

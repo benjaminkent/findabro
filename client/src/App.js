@@ -13,6 +13,7 @@ import UserProfile from './Components/UserProfile'
 import AboutPage from './Components/AboutPage'
 import Callback from './Components/Callback'
 import Splash from './Components/Splash'
+import Matches from './Components/Matches'
 
 const auth = new Auth()
 
@@ -42,6 +43,10 @@ class App extends Component {
             <Route
               path="/home"
               render={props => <MainPage auth={auth} {...props} />}
+            />
+            <Route
+              path="/matches"
+              render={props => <Matches auth={auth} {...props} />}
             />
             <Route
               path="/callback"

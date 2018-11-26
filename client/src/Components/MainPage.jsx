@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 import Header from './Header'
 import Callback from './Callback'
@@ -104,8 +105,11 @@ class MainPage extends Component {
           <section className="user-section">
             <div className="user-image-container">
               <div className="current-matches">
-                <h3>Budding Brolationships</h3>
-                <i className="fas fa-exclamation-circle notification" />
+                <Link className="match-link" to="/matches">
+                  <h3>Budding Brolationships</h3>
+                  {/* nice to have, notification of match */}
+                  {/* <i className="fas fa-exclamation-circle notification" /> */}
+                </Link>
               </div>
               <div className="name">
                 <div className="name-locale">

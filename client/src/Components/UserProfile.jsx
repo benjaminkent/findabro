@@ -39,6 +39,7 @@ class UserProfile extends Component {
         </>
       )
     }
+    console.log(this.state.user)
 
     const textAnswers = this.state.user.profile.answers.filter(
       answer => answer.question_kind === 'text'
@@ -56,8 +57,11 @@ class UserProfile extends Component {
           <section className="user-section">
             <div className="user-image-container">
               <div className="current-matches">
-                <h3>Budding Brolationships</h3>
-                <i className="fas fa-exclamation-circle notification" />
+                <Link className="match-link" to="/matches">
+                  <h3>Budding Brolationships</h3>
+                  {/* nice to have, notification of new match */}
+                  {/* <i className="fas fa-exclamation-circle notification" /> */}
+                </Link>
               </div>
               <div className="arrow-edit">
                 <Link className="back" to="/home">
