@@ -54,6 +54,7 @@ class UserEdit extends Component {
                   <i className="fas fa-ban cancel-edit-back" />
                 </Link>
               </div>
+              {/* for users to be able to change their name or location */}
               {/* <div className="edit-name-location">
                 <input
                   placeholder="First Name"
@@ -72,6 +73,7 @@ class UserEdit extends Component {
                 <h4>Let other bros know about some of the things you like!</h4>
                 <p>Update your profile by answering the questions below.</p>
               </div>
+              {/* if at some point users can upload their own image */}
               {/* <div className="edit-image-container">
                 <p className="upload-image-text">Upload an Image, Brother</p>
                 <img

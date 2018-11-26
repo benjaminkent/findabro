@@ -7,7 +7,8 @@ import ScrollToTop from './ScrollToTop'
 class MainPage extends Component {
   state = {
     profile: '',
-    user: null
+    user: null,
+    currentUser: ''
   }
 
   componentDidMount() {
@@ -22,6 +23,62 @@ class MainPage extends Component {
         this.setState({ profile, err })
       })
     }
+
+    const token = window.localStorage.getItem('id_token')
+    fetch('/api/users/profile', {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`
+      }
+    })
+      .then(a => a.json())
+      .then(data => {
+        this.setState({ currentUser: data })
+      })
+
+    if (this.props.auth.isAuthenticated()) {
+      this.props.auth.getProfile((err, profile) => {
+        this.setState({ profile, err })
+      })
+    }
+  }
+
+  _thumbsDown = event => {
+    const token = window.localStorage.getItem('id_token')
+
+    fetch('/api/thumbs/down', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`
+      },
+      body: JSON.stringify({
+        is_up: false,
+        thumber_id: this.state.currentUser.profile.id,
+        thumbee_id: this.state.user.id
+      })
+    })
+      .then(r => r.json())
+      .then(data => {})
+  }
+
+  _thumbsUp = event => {
+    const token = window.localStorage.getItem('id_token')
+
+    fetch('/api/thumbs/up', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`
+      },
+      body: JSON.stringify({
+        is_up: true,
+        thumber_id: this.state.currentUser.profile.id,
+        thumbee_id: this.state.user.id
+      })
+    })
+      .then(r => r.json())
+      .then(data => {})
   }
 
   render() {
@@ -68,8 +125,8 @@ class MainPage extends Component {
                 />
               </div>
               <div className="thumbs">
-                <i className="fas fa-thumbs-down" />
-                <i className="fas fa-thumbs-up" />
+                <i onClick={this._thumbsDown} className="fas fa-thumbs-down" />
+                <i onClick={this._thumbsUp} className="fas fa-thumbs-up" />
               </div>
             </div>
           </section>
