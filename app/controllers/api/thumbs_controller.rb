@@ -3,6 +3,10 @@ class Api::ThumbsController < ApplicationController
     render json: up
   end
 
+  def down
+    render json:down
+  end
+
 end
 
 # rails logger debugger
