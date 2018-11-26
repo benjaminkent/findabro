@@ -12,17 +12,7 @@ class MainPage extends Component {
   }
 
   componentDidMount() {
-    fetch('/api/answers/match')
-      .then(a => a.json())
-      .then(data => {
-        this.setState({ user: data })
-      })
-
-    if (this.props.auth.isAuthenticated()) {
-      this.props.auth.getProfile((err, profile) => {
-        this.setState({ profile, err })
-      })
-    }
+    this.loadMatch()
 
     const token = window.localStorage.getItem('id_token')
     fetch('/api/users/profile', {
@@ -43,6 +33,20 @@ class MainPage extends Component {
     }
   }
 
+  loadMatch = () => {
+    fetch('/api/answers/match')
+      .then(a => a.json())
+      .then(data => {
+        this.setState({ user: data })
+      })
+
+    if (this.props.auth.isAuthenticated()) {
+      this.props.auth.getProfile((err, profile) => {
+        this.setState({ profile, err })
+      })
+    }
+  }
+
   _thumbsDown = event => {
     const token = window.localStorage.getItem('id_token')
 
@@ -53,13 +57,10 @@ class MainPage extends Component {
         Authorization: `Bearer ${token}`
       },
       body: JSON.stringify({
-        is_up: false,
         thumber_id: this.state.currentUser.profile.id,
         thumbee_id: this.state.user.id
       })
-    })
-      .then(r => r.json())
-      .then(data => {})
+    }).then(() => this.loadMatch())
   }
 
   _thumbsUp = event => {
@@ -72,13 +73,10 @@ class MainPage extends Component {
         Authorization: `Bearer ${token}`
       },
       body: JSON.stringify({
-        is_up: true,
         thumber_id: this.state.currentUser.profile.id,
         thumbee_id: this.state.user.id
       })
-    })
-      .then(r => r.json())
-      .then(data => {})
+    }).then(() => this.loadMatch())
   }
 
   render() {
