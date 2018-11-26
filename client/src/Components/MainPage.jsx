@@ -24,7 +24,16 @@ class MainPage extends Component {
     })
       .then(a => a.json())
       .then(data => {
-        this.setState({ currentUser: data })
+        this.setState({ currentUser: data }, () => {
+          const _answers = this.state.currentUser.profile
+            ? this.state.currentUser.profile.answers
+            : undefined
+
+          if (_answers && _answers.length === 0) {
+            console.log('no answers, redirect ')
+            this.props.history.push('/edit-profile')
+          }
+        })
       })
 
     if (this.props.auth.isAuthenticated()) {
@@ -32,10 +41,6 @@ class MainPage extends Component {
         this.setState({ profile, err })
       })
     }
-
-    // if (this.state.currentUser.profile.answers.length === 0) {
-    //   this.props.history.push('/edit-profile')
-    // }
   }
 
   loadMatch = () => {
@@ -92,8 +97,6 @@ class MainPage extends Component {
         </>
       )
     }
-    console.log(this.state.currentUser.profile)
-
     const textAnswers = this.state.user.answers.filter(
       answer => answer.question.kind === 'text'
     )
