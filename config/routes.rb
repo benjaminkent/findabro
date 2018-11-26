@@ -13,6 +13,8 @@ Rails.application.routes.draw do
         get :matches
       end
     end
+
+    post '/messages', to: 'messages#index'
     
     # Make there be a /api/thumbs URL
     # and within that, make POST /api/thumbs/up go to api/thumbs_controller.rb and call "up" method

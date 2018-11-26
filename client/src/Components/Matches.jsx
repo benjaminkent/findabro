@@ -6,7 +6,8 @@ import Callback from './Callback'
 
 class Matches extends Component {
   state = {
-    matches: ''
+    matches: '',
+    currentUser: ''
   }
 
   componentDidMount() {
@@ -27,7 +28,41 @@ class Matches extends Component {
         this.setState({ profile, err })
       })
     }
+
+    fetch('/api/users/profile', {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`
+      }
+    })
+      .then(a => a.json())
+      .then(data => {
+        this.setState({ currentUser: data })
+      })
+
+    if (this.props.auth.isAuthenticated()) {
+      this.props.auth.getProfile((err, profile) => {
+        this.setState({ profile, err })
+      })
+    }
   }
+
+  // _message = event => {
+  //   const token = window.localStorage.getItem('id_token')
+
+  //   fetch('/api/messages', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //       Authorization: `Bearer ${token}`
+  //     },
+  //     body: JSON.stringify({
+  //       message: 'Hey cool.',
+  //       receiver_id: this.state.matches.id
+  //     })
+  //   })
+  // }
+
   render() {
     if (!this.state.matches) {
       return (
@@ -43,18 +78,22 @@ class Matches extends Component {
         <h1 className="matches-headline">
           These are the bros you've matched with!
         </h1>
-        {this.state.matches.map(match => {
+        {this.state.matches.map((match, index) => {
           return (
-            <div className="matches">
+            <div className="matches" key={index}>
               <img
                 className="match-image"
                 src={match.avatar_url}
                 alt="profile"
               />
               <div className="match-name-email">
-                <p className="match-name">{match.name}</p>
+                <p>{match.name}</p>
                 {/* nice to have, add messaging */}
-                <p className="match-name">Send a Message to {match.name}</p>
+                <a href={`mailto:${match.email}`} className="match-message">
+                  <p onClick={this._message} className="match-message">
+                    Send a email to {match.name}!
+                  </p>
+                </a>
               </div>
             </div>
           )
