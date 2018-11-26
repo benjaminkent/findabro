@@ -47,22 +47,6 @@ class Matches extends Component {
     }
   }
 
-  // _message = event => {
-  //   const token = window.localStorage.getItem('id_token')
-
-  //   fetch('/api/messages', {
-  //     method: 'POST',
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //       Authorization: `Bearer ${token}`
-  //     },
-  //     body: JSON.stringify({
-  //       message: 'Hey cool.',
-  //       receiver_id: this.state.matches.id
-  //     })
-  //   })
-  // }
-
   render() {
     if (!this.state.matches) {
       return (

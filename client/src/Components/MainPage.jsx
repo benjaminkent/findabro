@@ -32,6 +32,10 @@ class MainPage extends Component {
         this.setState({ profile, err })
       })
     }
+
+    // if (this.state.currentUser.profile.answers.length === 0) {
+    //   this.props.history.push('/edit-profile')
+    // }
   }
 
   loadMatch = () => {
@@ -88,6 +92,7 @@ class MainPage extends Component {
         </>
       )
     }
+    console.log(this.state.currentUser.profile)
 
     const textAnswers = this.state.user.answers.filter(
       answer => answer.question.kind === 'text'
