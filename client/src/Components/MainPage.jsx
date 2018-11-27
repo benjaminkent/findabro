@@ -31,7 +31,6 @@ class MainPage extends Component {
             : undefined
 
           if (_answers && _answers.length === 0) {
-            console.log('no answers, redirect ')
             this.props.history.push('/edit-profile')
           }
         })

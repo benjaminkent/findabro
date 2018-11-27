@@ -40,7 +40,6 @@ class UserProfile extends Component {
         </>
       )
     }
-    console.log(this.state.user)
 
     const textAnswers = this.state.user.profile.answers.filter(
       answer => answer.question_kind === 'text'
