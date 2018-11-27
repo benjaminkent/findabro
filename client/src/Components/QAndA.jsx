@@ -9,6 +9,12 @@ class QAndA extends Component {
     this.setState({ answer: event.target.value })
   }
 
+  componentDidUpdate(newProps) {
+    if (newProps.question !== this.props.question) {
+      this.setState({ answer: '' })
+    }
+  }
+
   render() {
     return (
       <>
