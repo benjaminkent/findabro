@@ -17,12 +17,13 @@ class Api::AnswersController < ApplicationController
     }
   end
 
-  # def match
-  #   @user = User.order("RANDOM()").first
-  # end
+  def match
+    own_thumbs = current_user.thumbs_made.map(&:thumbee_id) << current_user.id
+    @user = User.not.where(id: own_thumbs).order("RANDOM()").first
+  end
 
   # def match
-  #   own_thumbs = current_user.thumbs_made.where(is_up: true || false).map(&:thumbee_id)
+  #   own_thumbs = current_user.thumbs_made.where(is_up: true).map(&:thumbee_id)
   #   @user = Thumb.where(thumbee: current_user, thumber_id: own_thumbs).map(&:thumber)
   #   render json: @user
   # end
