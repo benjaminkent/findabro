@@ -119,23 +119,23 @@
   background-color: #d6d6d6;
   color: $primary-black;
   height: 100%;
+}
 
-  .about-questions {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.9rem;
-    padding-bottom: 0.5rem;
-  }
+.about-questions {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  padding-bottom: 0.5rem;
+}
 
-  .about-questions p {
-    margin: 0;
-  }
+.about-questions p {
+  margin: 0;
+}
 
-  .about-questions p:first-child {
-    font-weight: 700;
-    font-family: $arvo;
-  }
+.about-questions p:first-child {
+  font-weight: 700;
+  font-family: $arvo;
 }
 
 .meme-section-container {

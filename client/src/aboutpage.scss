@@ -4,6 +4,7 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-color: #d6d6d6;
+  padding-bottom: 5rem;
 }
 
 .about-page-main h1 {
@@ -15,10 +16,17 @@
 }
 
 .about-page-main p {
-  padding: 1.5rem;
+  padding: 0.5rem 1rem;
   color: $primary-black;
   font-family: $poppins;
   margin: 0;
+}
+
+@media (min-width: 700px) {
+  .about-page-main {
+    background-position: left -10vw top 50vw;
+    padding-bottom: 10rem;
+  }
 }
 
 @media (min-width: 800px) {
@@ -30,34 +38,41 @@
 @media (min-width: 900px) {
   .about-page-main {
     background-position: left -10vw top 40vw;
-    padding-bottom: 6rem;
+    padding-bottom: 14rem;
+  }
+}
+
+@media (min-width: 950px) {
+  .about-page-main {
+    background-position: left -10vw top 40vw;
+    padding-bottom: 15rem;
   }
 }
 
 @media (min-width: 1000px) {
   .about-page-main {
     background-position: left -10vw top 40vw;
-    padding-bottom: 6rem;
+    padding-bottom: 17rem;
   }
 }
 
 @media (min-width: 1200px) {
   .about-page-main {
     background-position: left -5vw top 35vw;
-    padding-bottom: 7rem;
+    padding-bottom: 17rem;
   }
 }
 
-@media (min-width: 1350px) {
+@media (min-width: 1300px) {
   .about-page-main {
     background-position: left -5vw top 35vw;
-    padding-bottom: 13rem;
+    padding-bottom: 22rem;
   }
 }
 
 @media (min-width: 1500px) {
   .about-page-main {
     background-position: left -3vw top 25vw;
-    padding-bottom: 13rem;
+    padding-bottom: 24rem;
   }
 }
