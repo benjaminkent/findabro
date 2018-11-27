@@ -18,16 +18,10 @@ class Api::AnswersController < ApplicationController
   end
 
   def match
-    own_thumbs = current_user.thumbs_made.pluck(:thumbee_id) << current_user.id
-    @user = User.where.not(id: own_thumbs).order("RANDOM()").first
+    # for later production, so users don't see the same profile twice
+    # own_thumbs = current_user.thumbs_made.pluck(:thumbee_id) << current_user.id
+    @user = User.where.not(id: params[:currentUser]).order("RANDOM()").first
   end
-
-  # def match
-  #   own_thumbs = current_user.thumbs_made.where(is_up: true).map(&:thumbee_id)
-  #   @user = Thumb.where(thumbee: current_user, thumber_id: own_thumbs).map(&:thumber)
-  #   render json: @user
-  # end
-
 
   def show
     @answers = Answer.find(params[:id])
