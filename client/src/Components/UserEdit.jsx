@@ -42,7 +42,7 @@ class UserEdit extends Component {
       <>
         <ScrollToTop />
         <Header />
-        <div className="main-page-content">
+        <div className="edit-page-content">
           <section className="user-section">
             <div className="user-image-container">
               <div className="cancel-edit">
@@ -72,7 +72,7 @@ class UserEdit extends Component {
               </div> */}
               <div className="edit-profile-about">
                 <h4>Let other bros know about some of the things you like!</h4>
-                <p>Update your profile by answering the questions below.</p>
+                <p>Pick the answer that best describes you.</p>
               </div>
               {/* if at some point users can upload their own image */}
               {/* <div className="edit-image-container">

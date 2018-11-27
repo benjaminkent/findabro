@@ -14,7 +14,7 @@ class QAndA extends Component {
       <>
         <div>
           <section className="about-section">
-            <div className="about-section-container">
+            <div className="edit-about-section-container">
               <h2 className="about-user">About You</h2>
               <p className="about-user-info">
                 Answer some questions about yourself

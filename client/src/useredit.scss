@@ -38,6 +38,14 @@ label {
   border-width: 0.5px;
 }
 
+.edit-about-section-container {
+  padding: 1rem;
+  background-color: #d6d6d6;
+  color: $primary-black;
+  height: 100%;
+  font-family: $poppins;
+}
+
 .edit-name-location input:focus {
   outline: none;
 }
@@ -112,7 +120,7 @@ input.radio:checked {
 }
 
 .submit-answer {
-  margin: 1rem auto 1rem auto;
+  margin: 1rem auto 9rem auto;
   display: flex;
   justify-content: center;
   font-family: $arvo;
@@ -131,4 +139,10 @@ input.radio:checked {
   transition: 0.2s all ease-in-out;
   color: $primary-mustard;
   background-color: $primary-black;
+}
+
+@media (min-width: 750px) {
+  .submit-answer {
+    margin-bottom: 11rem;
+  }
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Auth from '../auth/auth.js'
 
 import ScrollToTop from './ScrollToTop'
+import Footer from './Footer'
 
 const auth = new Auth()
 
@@ -36,6 +37,7 @@ class Splash extends Component {
             </div>
           </main>
         </div>
+        <Footer />
       </>
     )
   }
