@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 import ScrollToTop from './ScrollToTop'
 import Header from './Header'
@@ -62,6 +63,9 @@ class Matches extends Component {
         <h1 className="matches-headline">
           These are the bros you've matched with!
         </h1>
+        <Link className="back" to="/home">
+          <i className="fas fa-caret-left match-back" />
+        </Link>
         {this.state.matches.map((match, index) => {
           return (
             <div className="matches" key={index}>
