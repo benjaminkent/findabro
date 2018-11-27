@@ -72,7 +72,7 @@ class UserEdit extends Component {
               </div> */}
               <div className="edit-profile-about">
                 <h4>Let other bros know about some of the things you like!</h4>
-                <p>Pick the answer that best describes you.</p>
+                <p>Answer a few questions about yourself.</p>
               </div>
               {/* if at some point users can upload their own image */}
               {/* <div className="edit-image-container">

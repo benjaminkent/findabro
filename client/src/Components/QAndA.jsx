@@ -23,7 +23,7 @@ class QAndA extends Component {
             <div className="edit-about-section-container">
               <h2 className="about-user">About You</h2>
               <p className="about-user-info">
-                Answer some questions about yourself
+                Pick the answer that best describes you
               </p>
               <div className="about-underline" />
               <fieldset className="about-questions">
