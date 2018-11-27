@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 import Header from './Header'
+import Footer from './Footer'
 import Callback from './Callback'
 import ScrollToTop from './ScrollToTop'
 
@@ -175,6 +176,7 @@ class MainPage extends Component {
             </div>
           </section>
         </div>
+        <Footer />
       </>
     )
   }

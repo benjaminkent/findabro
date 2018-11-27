@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 
 import Header from './Header'
+import Footer from './Footer'
+
 import ScrollToTop from './ScrollToTop'
 
 class AboutPage extends Component {
@@ -54,6 +56,7 @@ class AboutPage extends Component {
             </p>
           </div>
         </section>
+        <Footer />
       </>
     )
   }

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 import Header from './Header'
+import Footer from './Footer'
 import ScrollToTop from './ScrollToTop'
 import Callback from './Callback'
 
@@ -126,6 +127,7 @@ class UserProfile extends Component {
             </div>
           </section>
         </div>
+        <Footer />
       </>
     )
   }

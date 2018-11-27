@@ -6,7 +6,6 @@ import './App.css'
 import Auth from './auth/auth'
 import history from './auth/history'
 
-import Footer from './Components/Footer'
 import MainPage from './Components/MainPage'
 import UserEdit from './Components/UserEdit'
 import UserProfile from './Components/UserProfile'
@@ -56,7 +55,6 @@ class App extends Component {
               }}
             />
           </Switch>
-          <Footer />
         </>
       </Router>
     )

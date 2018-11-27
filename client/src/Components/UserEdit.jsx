@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import questions from './questions.json'
 
 import Header from './Header'
+import Footer from './Footer'
 import ScrollToTop from './ScrollToTop'
 import QAndA from './QAndA'
 import MemeSelect from './MemeSelect'
@@ -90,6 +91,7 @@ class UserEdit extends Component {
             <MemeSelect {...currentQuestion} onSubmit={this._submit} />
           )}
         </div>
+        <Footer />
       </>
     )
   }
