@@ -18,8 +18,8 @@ class Api::AnswersController < ApplicationController
   end
 
   def match
-    own_thumbs = current_user.thumbs_made.map(&:thumbee_id) << current_user.id
-    @user = User.not.where(id: own_thumbs).order("RANDOM()").first
+    own_thumbs = current_user.thumbs_made.pluck(:thumbee_id) << current_user.id
+    @user = User.where.not(id: own_thumbs).order("RANDOM()").first
   end
 
   # def match

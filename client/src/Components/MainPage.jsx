@@ -44,7 +44,14 @@ class MainPage extends Component {
   }
 
   loadMatch = () => {
-    fetch('/api/answers/match')
+    const token = window.localStorage.getItem('id_token')
+
+    fetch('/api/answers/match', {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`
+      }
+    })
       .then(a => a.json())
       .then(data => {
         this.setState({ user: data })
