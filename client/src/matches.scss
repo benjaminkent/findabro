@@ -16,7 +16,8 @@
 .match-image {
   height: 6rem;
   margin: 0.2rem 0;
-  padding-left: 0.5rem;
+  margin-left: 0.5rem;
+  border-radius: 5px;
 }
 
 .matches {
@@ -28,11 +29,17 @@
 
 .match-name-email {
   margin-left: 1rem;
-  font-family: $arvo;
   color: $primary-black;
+}
+
+.match-name {
+  font-family: $arvo;
+  font-size: 1.5rem;
+  margin: 0.5rem 0 0 0;
 }
 
 .match-message {
   cursor: pointer;
   color: $primary-black;
+  font-family: $poppins;
 }

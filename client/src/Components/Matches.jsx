@@ -56,7 +56,7 @@ class Matches extends Component {
       )
     }
     return (
-      <>
+      <div className="matches-container">
         <ScrollToTop />
         <Header />
         <h1 className="matches-headline">
@@ -71,18 +71,18 @@ class Matches extends Component {
                 alt="profile"
               />
               <div className="match-name-email">
-                <p>{match.name}</p>
+                <p className="match-name">{match.name}</p>
                 {/* nice to have, add messaging */}
                 <a href={`mailto:${match.email}`} className="match-message">
                   <p onClick={this._message} className="match-message">
-                    Send a email to {match.name}!
+                    Send {match.name} an email!
                   </p>
                 </a>
               </div>
             </div>
           )
         })}
-      </>
+      </div>
     )
   }
 }
