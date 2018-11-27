@@ -7,6 +7,11 @@
   padding-bottom: 5rem;
 }
 
+.brand-name {
+  font-family: $arvo;
+  font-size: 1.1rem;
+}
+
 .about-page-main h1 {
   margin: 0;
   padding-top: 5.5rem;
@@ -20,6 +25,10 @@
   color: $primary-black;
   font-family: $poppins;
   margin: 0;
+}
+
+.contact {
+  color: $primary-black;
 }
 
 @media (min-width: 700px) {

@@ -21,8 +21,10 @@ class AboutPage extends Component {
           >
             <h1>About Find a Bro</h1>
             <p>
-              <strong>Welcome to Find a Bro!</strong> A place for men to feel
-              comfortable looking for new friends.
+              <strong>
+                Welcome to <span className="brand-name">Find a Bro</span>!
+              </strong>{' '}
+              A place for men to feel comfortable looking for new friends.
             </p>
             <p>
               The idea for the app came about because I moved to a new city two
@@ -53,6 +55,13 @@ class AboutPage extends Component {
               thumbs up or thumbs down. Check in periodically on the Budding
               Brolationships link and see if guys you have given a thumbs up to,
               have also thumbs upped you! Good luck!
+            </p>
+            <p>
+              If you have any issues or concerns, you can contact us at{' '}
+              <a className="contact" href="mailto:findabrohelp@gmail.com">
+                findabrohelp@gmail.com
+              </a>
+              .
             </p>
           </div>
         </section>
