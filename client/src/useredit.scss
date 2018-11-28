@@ -87,6 +87,14 @@ label {
   font-size: 1.5rem;
 }
 
+.input-label {
+  cursor: pointer;
+}
+
+.radio {
+  cursor: pointer;
+}
+
 input.radio {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -99,7 +107,7 @@ input.radio {
   margin-right: 5px;
   background-color: white;
   position: relative;
-  top: 0.17rem;
+  top: 0.28rem;
   outline: none;
 }
 
@@ -129,6 +137,7 @@ input.radio:checked {
   background-color: $primary-mustard;
   color: $primary-black;
   border: 1px solid $primary-black;
+  cursor: pointer;
 }
 
 .submit-answer:focus {

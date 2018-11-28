@@ -57,20 +57,25 @@ class UserProfile extends Component {
           <section className="user-section">
             <div className="user-image-container">
               <div className="current-matches">
-                <Link className="match-link" to="/matches">
+                <Link
+                  className="match-link"
+                  to="/matches"
+                  title="View you matches"
+                >
                   <h3>Budding Brolationships</h3>
                   {/* nice to have, notification of new match */}
                   {/* <i className="fas fa-exclamation-circle notification" /> */}
                 </Link>
               </div>
               <div className="arrow-edit">
-                <Link className="back" to="/home">
+                <Link className="back" to="/home" title="Go to the main page">
                   <i className="fas fa-caret-left back" />
                 </Link>
                 <div>
                   <Link
                     to="/edit-profile"
                     className="link-no-underline user-edit"
+                    title="Edit or Update your profile"
                   >
                     <p className="edit">Edit Profile</p>
                     <i className="fas fa-user-edit edit-arrow" />

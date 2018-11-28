@@ -49,7 +49,7 @@ class UserEdit extends Component {
                 <Link
                   to="/profile"
                   className="link-no-underline cancel-edit"
-                  title="Back to the main screen"
+                  title="Nah, nevermind"
                 >
                   <p>Cancel Edit</p>
                   <i className="fas fa-ban cancel-edit-back" />

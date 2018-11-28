@@ -13,6 +13,7 @@ input:checked + .meme-select {
   border: thick solid transparentize($primary-black, 1);
   border-radius: 10px;
   margin: 0 0 1rem 0;
+  cursor: pointer;
 }
 
 .radio-meme {

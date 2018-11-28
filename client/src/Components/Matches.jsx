@@ -63,7 +63,7 @@ class Matches extends Component {
         <h1 className="matches-headline">
           These are the bros you've matched with!
         </h1>
-        <Link className="back" to="/home">
+        <Link className="back" to="/home" title="Go to main page">
           <i className="fas fa-caret-left match-back" />
         </Link>
         {this.state.matches.map((match, index) => {

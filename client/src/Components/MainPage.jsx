@@ -123,7 +123,11 @@ class MainPage extends Component {
           <section className="user-section">
             <div className="user-image-container">
               <div className="current-matches">
-                <Link className="match-link" to="/matches">
+                <Link
+                  className="match-link"
+                  to="/matches"
+                  title="View your matches"
+                >
                   <h3>Budding Brolationships</h3>
                   {/* nice to have, notification of match */}
                   {/* <i className="fas fa-exclamation-circle notification" /> */}
@@ -145,8 +149,16 @@ class MainPage extends Component {
                 />
               </div>
               <div className="thumbs">
-                <i onClick={this._thumbsDown} className="fas fa-thumbs-down" />
-                <i onClick={this._thumbsUp} className="fas fa-thumbs-up" />
+                <i
+                  onClick={this._thumbsDown}
+                  className="fas fa-thumbs-down"
+                  title="Say no to this bro"
+                />
+                <i
+                  onClick={this._thumbsUp}
+                  className="fas fa-thumbs-up"
+                  title="Sure, we could be friends"
+                />
               </div>
             </div>
           </section>

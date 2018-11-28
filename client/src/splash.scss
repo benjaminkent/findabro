@@ -58,3 +58,7 @@
 .login:hover {
   cursor: pointer;
 }
+
+.login:focus {
+  outline-color: $primary-mustard;
+}

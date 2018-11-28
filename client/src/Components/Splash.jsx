@@ -31,7 +31,11 @@ class Splash extends Component {
               bro!
             </p>
             <div>
-              <button onClick={this._login} className="login">
+              <button
+                onClick={this._login}
+                className="login"
+                title="Log In to Find a Bro"
+              >
                 Log In
               </button>
             </div>

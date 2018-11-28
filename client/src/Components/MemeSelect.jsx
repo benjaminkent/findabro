@@ -42,6 +42,7 @@ class MemeSelect extends Component {
                   onClick={() => {
                     this.props.onSubmit(this.props.id, this.state.selected)
                   }}
+                  title="Submit this answer"
                 >
                   Submit Answer
                 </button>

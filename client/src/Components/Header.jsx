@@ -39,7 +39,7 @@ class Header extends Component {
             </Link>
             <Link
               to="/profile"
-              title="Edit Your Profile"
+              title="View Your Profile"
               className="header-anchor"
             >
               <i className="fas fa-user" />

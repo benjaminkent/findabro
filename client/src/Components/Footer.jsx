@@ -18,6 +18,7 @@ class Footer extends Component {
             <p>
               2018 Benjamin Kent Jehl,{' '}
               <a
+                className="portfolio-site"
                 href="http://benjaminkent.io/"
                 target="_blank"
                 rel="noopener noreferrer"

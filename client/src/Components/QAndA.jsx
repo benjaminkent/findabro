@@ -31,7 +31,7 @@ class QAndA extends Component {
                 {this.props.answers.map(answer => (
                   <div className="edit-answers" key={answer}>
                     <div className="radio-edits">
-                      <label>
+                      <label className="input-label">
                         <input
                           className="radio"
                           type="radio"
@@ -50,6 +50,7 @@ class QAndA extends Component {
                   onClick={() => {
                     this.props.onSubmit(this.props.id, this.state.answer)
                   }}
+                  title="Submit this answer"
                 >
                   Submit Answer
                 </button>
